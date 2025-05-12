@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }}</title>
+</head>
+<body>
+    <h1>{{ product.name }}</h1>
+    <img src="{{ product.image.url }}" alt="{{ product.name }}" style="width: 300px; height: auto;">
+    <p>{{ product.description }}</p>
+    <p>Цена: {{ product.price }} руб.</p>
+    <p>Количество: {{ product.quantity }}</p>
+    <form action="{% url 'add_to_cart' product.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Добавить в корзину</button>
+    </form>
+    <a href="{% url 'shop' %}">Назад к списку продуктов</a>
+</body>
+</html>

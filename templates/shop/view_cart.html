@@ -1,0 +1,67 @@
+{% load cart_tags %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .total {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Корзина</h1>
+    <ul>
+        {% if cart_items %}
+            {% for item in cart_items %}
+                <li>
+                    <h2>{{ item.product_id.name }}</h2>
+                    <p>Количество: {{ item.quantity }} шт.</p>
+                    <p>Цена за единицу: {{ item.product_id.price }} руб.</p>
+                    <p>Итого: {{ item.quantity|multiply:item.product_id.price }} руб.</p>
+                </li>
+            {% endfor %}
+            <li class="total">
+                <strong>Общая сумма:
+                    {{ cart_items|sum_total }} руб.
+                </strong>
+            </li>
+        {% else %}
+            <li>Корзина пуста.</li>
+        {% endif %}
+    </ul>
+{#    <a class="button" href="{% url 'checkout' %}">Оформить заказ</a>#}
+    <a class="button" href="{% url 'shop' %}">Назад к списку продуктов</a>
+</body>
+</html>
