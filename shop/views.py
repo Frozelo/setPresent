@@ -1,7 +1,7 @@
 from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect
 
-from shop.models import Product, Cart, CartItem
+from shop.models import Product, Cart, CartItem, Order, OrderItem
 
 
 def index(request):
@@ -26,8 +26,24 @@ def add_to_cart(request, product_id):
 
     return redirect('view_cart')
 
+
 def view_cart(request):
     cart = get_object_or_404(Cart, user_id=request.user)
     cart_items = CartItem.objects.filter(cart_id=cart)
     return render(request, 'shop/view_cart.html', {'cart_items': cart_items})
 
+
+def checkout(request):
+    cart = get_object_or_404(Cart, user_id=request.user)
+    print(cart)
+    cart_items = CartItem.objects.filter(cart_id=cart)
+
+    if cart_items.exists():
+        order = Order.objects.create(user_id=request.user, user_comment=request.POST.get('comment', ''))
+        for item in cart_items:
+            OrderItem.objects.create(order_id=order, product_id=item.product_id, quantity=item.quantity,
+                                     price=item.product_id.price)
+        cart_items.delete()
+        return redirect('shop')
+
+    return render(request, 'shop/checkout.html')

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .cart-item {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .total {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Оформление заказа</h1>
+    <form action="{% url 'checkout' %}" method="post">
+        {% csrf_token %}
+        <div>
+            {% if cart_items %}
+                {% for item in cart_items %}
+                    <div class="cart-item">
+                        <h2>{{ item.product_id.name }}</h2>
+                        <p>Количество: {{ item.quantity }} шт.</p>
+                        <p>Цена за единицу: {{ item.product_id.price }} руб.</p>
+                        <p>Итого: {{ item.quantity|multiply:item.product_id.price }} руб.</p>
+                    </div>
+                {% endfor %}
+                <div class="total">
+                    <strong>Общая сумма:
+                        {{ cart_items|sum_total }} руб.
+                    </strong>
+                </div>
+            {% else %}
+                <p>Ваша корзина пуста. Невозможно оформить заказ.</p>
+                <a class="button" href="{% url 'index' %}">Назад к списку продуктов</a>
+                return
+            {% endif %}
+        </div>
+        <div>
+            <label for="comment">Комментарий к заказу:</label><br>
+            <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Введите ваш комментарий..."></textarea>
+        </div>
+        <button type="submit" class="button">Подтвердить заказ</button>
+    </form>
+    <a class="button" href="{% url 'view_cart' %}">Назад в корзину</a>
+</body>
+</html>
