@@ -111,60 +111,19 @@
 <button class="btn-symbol-a btn-symbol2 hover-fx">Показать</button>
 
 <div class="column-d col7">
-    <div class="column-row">
-        <div class="card-b card2">
-            <div class="card-circle-white-top2 circle-white2">
-                <object data="{% static 'assets/card-circle-white/card-heroicons.svg' %}"
-                        class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-            </div>
-            <div class="card-circle-white-bottom">
-                <object data="{% static 'assets/circle-white/circle-white-heroicons2.svg' %}"
-                        class="card-heroicons-solid-heart card-heroicons3" type="image/svg+xml"></object>
-            </div>
+    <div class="product-list">
+        {% for product in products %}
+        <div class="product">
+            {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 150px;">
+            {% endif %}
+            <p>{{ product.name }}</p>
+            <p>{{ product.price }} ₽</p>
+            <a href="{% url 'product_detail' product.id %}">Подробнее</a>
         </div>
-        <div class="card-b card3">
-            <div class="card-circle-white-top2 circle-white2">
-                <object data="{% static 'assets/card-circle-white/card-heroicons.svg' %}"
-                        class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-            </div>
-            <div class="card-circle-white-bottom">
-                <object data="{% static 'assets/circle-white/circle-white-heroicons2.svg' %}"
-                        class="card-heroicons-solid-heart card-heroicons3" type="image/svg+xml"></object>
-            </div>
-        </div>
-        <div class="card-b card4">
-            <div class="card-circle-white-top2 circle-white2">
-                <object data="{% static 'assets/card-circle-white/card-heroicons.svg' %}"
-                        class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-            </div>
-            <div class="card-circle-white-bottom">
-                <object data="{% static 'assets/circle-white/circle-white-heroicons2.svg' %}"
-                        class="card-heroicons-solid-heart card-heroicons3" type="image/svg+xml"></object>
-            </div>
-        </div>
-    </div>
-    <div class="column-row-bottom1">
-        <div class="column-e col1">
-            <p>
-                Подарочный набор<br/>
-                «Антрацит»
-            </p>
-            <button class="btn-a column-btn2 hover-fx">8 775 ₽</button>
-        </div>
-        <div class="column-e col2">
-            <p>
-                Подарочный набор<br/>
-                «Улыбайся чаще»
-            </p>
-            <button class="btn-a column-btn2 hover-fx">5 544 ₽</button>
-        </div>
-        <div class="column-e col3">
-            <p>
-                Подарочный набор<br/>
-                «Красота-это ты!»
-            </p>
-            <button class="btn-a column-btn2 hover-fx">4 900 ₽</button>
-        </div>
+        {% empty %}
+        <p>Нет доступных продуктов.</p>
+        {% endfor %}
     </div>
 </div>
 
