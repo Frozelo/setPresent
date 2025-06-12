@@ -27,9 +27,11 @@
   <object data="{% static 'assets/header-heroicons-216.svg' %}" class="heroicons-solid-heart-a heroicons-solid-heart1" type="image/svg+xml"></object>
   <object data="{% static 'assets/header-graphic.svg' %}" class="graphic1" type="image/svg+xml"></object>
   <p class="text-plus text3">+7 (495) 488-72-72</p>
-  <img src="{% static 'assets/symbol.png' %}" class="symbol7 box3" />
-  <h1 class="title-symbol title-black">Подарочный набор «Улыбайся чаще»</h1>
-  <h1 class="title2 title-black">23 510 ₽</h1>
+  {% if product.image %}
+  <img src="{{ product.image.url }}" class="symbol7 box3" />
+  {% endif %}
+  <h1 class="title-symbol title-black">{{ product.name }}</h1>
+  <h1 class="title2 title-black">{{ product.price }} ₽</h1>
 
   <div class="card-c card7">
     <p class="text-symbol-b">В избранное</p>
@@ -59,12 +61,7 @@
     <object data="{% static 'assets/symbol/row/row-heroicons.svg' %}" class="row-heroicons-solid-chevron row-heroicons2" type="image/svg+xml"></object>
   </div>
 
-  <p class="text-symbol1 text-gray1">
-    фарфоровая кружка ручной работы "Улыбайся чаще"  (возможно брендирование или своя надпись, цвет и модель –  в зависимости от сроков и тиражей);
-  </p>
-  <p class="text-symbol2 text-gray1">весенний хлопковый палантин;</p>
-  <p class="text-symbol3 text-gray1">суккулент;</p>
-  <p class="text-symbol4 text-gray1">коробка из дизайнерского картона 25х25.</p>
+  <p class="text-symbol1 text-gray1">{{ product.description }}</p>
   <div class="line-b line2"></div>
 
   <div class="row-c row3">
