@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оформление заказа</title>
+{% extends 'base.html' %}
+{% block title %}Оформление заказа{% endblock %}
+{% block content %}
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -36,7 +33,6 @@
         }
     </style>
 </head>
-<body>
     <h1>Оформление заказа</h1>
     <form action="{% url 'checkout' %}" method="post">
         {% csrf_token %}
@@ -68,5 +64,4 @@
         <button type="submit" class="button">Подтвердить заказ</button>
     </form>
     <a class="button" href="{% url 'view_cart' %}">Назад в корзину</a>
-</body>
-</html>
+{% endblock %}

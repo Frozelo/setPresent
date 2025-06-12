@@ -1,17 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/reset.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/fonts.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/global.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/desktop6.css' %}" />
-</head>
-
-<body>
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Профиль{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/desktop6.css' %}">
   <div class="group1 btn1">
     <object data="{% static 'assets/btn-icon.svg' %}" class="heroicons-solid-heart-b heroicons-outline-phone" type="image/svg+xml"></object>
   </div>
@@ -201,5 +192,4 @@
       <p class="nav-items-text-symbol">Доставка</p>
     </div>
   </footer>
-</body>
-</html>
+{% endblock %}
