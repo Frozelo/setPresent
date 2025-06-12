@@ -1,0 +1,14 @@
+.main-nav, .footer-nav {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.main-nav a, .footer-nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+.main-nav a:hover, .footer-nav a:hover {
+    text-decoration: underline;
+}
