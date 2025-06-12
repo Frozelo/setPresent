@@ -31,12 +31,16 @@
 
   <div class="row2">
     <button class="btn-symbol1 hover-fx text5">Войти</button>
-    <p class="text-symbol1">Зарегистрироваться</p>
+    <a href="{% url 'registration' %}" class="text-symbol1">Зарегистрироваться</a>
   </div>
 
-  <input class="input-symbol" value="Номер телефона" />
-  <input class="input-symbol" value="Пароль" />
-  <button class="btn-symbol-c btn3 hover-fx">Войти</button>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {{ form.username }}
+    {{ form.password }}
+    <button type="submit" class="btn-symbol-c btn3 hover-fx">Войти</button>
+  </form>
   <p class="text-symbol2">Не помню пароль</p>
 
   <footer class="footer-b footer1">

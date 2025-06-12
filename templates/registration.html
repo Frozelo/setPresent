@@ -30,15 +30,21 @@
   <h2 class="subtitle-symbol1 subtitle-gray2">Регистрация</h2>
 
   <div class="row2">
-    <p class="text-symbol1">Войти</p>
+    <a href="{% url 'auth' %}" class="text-symbol1">Войти</a>
     <button class="btn-symbol1 text5 hover-fx">Зарегистрироваться</button>
   </div>
 
-  <input class="input-symbol input-symbol1" value="Имя" />
-  <input class="input-symbol input-symbol2" value="Фамилия" />
-  <input class="input-symbol input-email" value="Email" />
-  <input class="input-symbol input-symbol3" value="Пароль" />
-  <button class="btn-symbol-c btn-symbol2 hover-fx">Зарегистрироваться</button>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    {{ form.username }}
+    {{ form.first_name }}
+    {{ form.last_name }}
+    {{ form.email }}
+    {{ form.password1 }}
+    {{ form.password2 }}
+    <button type="submit" class="btn-symbol-c btn-symbol2 hover-fx">Зарегистрироваться</button>
+  </form>
   <p class="text6 text-gray3">
     Данные формы обрабатываются на основании <a class="link2" href="#">пользовательского соглашения</a>
   </p>

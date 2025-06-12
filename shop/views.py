@@ -1,5 +1,6 @@
-from django.http import Http404
 from django.shortcuts import render, get_object_or_404, redirect
+from django.contrib.auth import login, authenticate
+from user.forms import RegistrationForm, LoginForm
 
 from shop.models import Product, Cart, CartItem, Order, OrderItem
 
@@ -56,19 +57,37 @@ def main_page(request):
 
 # Каталог
 def catalog(request):
-    return render(request, "catalog.html")
+    products = Product.objects.all().order_by('name')
+    return render(request, "catalog.html", {"products": products})
 
 
 def product_detail(request, product_id):
-    return render(request, "product_detail.html")
+    product = get_object_or_404(Product, id=product_id)
+    return render(request, "product_detail.html", {"product": product})
 
 
 def auth(request):
-    return render(request, "auth.html")
+    if request.method == "POST":
+        form = LoginForm(request, data=request.POST)
+        if form.is_valid():
+            login(request, form.get_user())
+            return redirect("catalog")
+    else:
+        form = LoginForm()
+    return render(request, "auth.html", {"form": form})
 
 
 def registration(request):
-    return render(request, "registration.html")
+    if request.method == "POST":
+        form = RegistrationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            Cart.objects.create(user_id=user)
+            login(request, user)
+            return redirect("catalog")
+    else:
+        form = RegistrationForm()
+    return render(request, "registration.html", {"form": form})
 
 
 # Линый кабинет
