@@ -1,0 +1,271 @@
+body {
+	gap: 144px;
+	color: #000;
+	padding-top: 378px;
+}
+
+
+
+/* frame */
+
+.frame {
+	position: absolute; left: 399px; 
+	background-color: #f5f5f5;
+	padding: 5px 55px;
+	border-radius: 100px;
+}
+/* end frame*/
+
+
+.group1 .group-heroicons1 {
+	top: 11px; left: 25px; 
+	width: 21px; height: 21px;
+}
+
+.subtitle-set-present {
+	position: absolute; top: 46px; left: 131px; right: 1078px; 
+	text-transform: uppercase;
+}
+
+.heroicons-solid-user {
+	top: 56px; right: 76px; 
+	width: 16px; height: 21px;
+}
+
+.heroicons1 {
+	top: 56px; right: 122px; 
+	width: 21px; height: 20px;
+}
+
+.heroicons-solid-heart1 {
+	top: 57px; right: 170px; 
+	width: 20px; height: 18px;
+}
+
+.graphic1 {
+	position: absolute; top: 57px; left: 5%; 
+	width: 2%; height: 17px;
+}
+
+.text-plus {
+	position: absolute; top: 56px; right: 256px; 
+}
+
+.card7 {
+	position: absolute; top: 235px; right: 72px; 
+	gap: 53px;
+	font-size: 16px;
+}
+
+.card-circle3 {
+	position: relative;
+	width: 38px;
+	flex-shrink: 0;
+	align-self: start;
+	aspect-ratio: 1 / 1;
+}
+
+
+
+/* heroicons-solid-shopping */
+
+.heroicons-solid-shopping {
+	position: absolute; top: 23%; left: 23%; 
+	width: 55%; height: 55%;
+	background-color: #fff;
+}
+
+.heroicons-solid-shopping-graphic {
+	position: absolute; top: 9%; left: 6%; 
+	width: 87%;
+}
+/* end heroicons-solid-shopping*/
+
+
+.title-symbol {
+	position: absolute; top: 232px; left: 72px; 
+}
+
+.symbol7 {
+	position: absolute; top: 403px; left: 72px; 
+}
+
+.subtitle-symbol1 {
+	position: absolute; top: 403px; left: 260px; right: 871px; 
+}
+
+.heroicons-solid-x1 {
+	top: 408px; right: 77px; 
+	width: 14px; height: 14px;
+}
+
+.frame1 {
+	top: 485px; 
+}
+
+.frame1 .frame-heroicons {
+	position: unset;
+	width: 21px; height: 21px;
+}
+
+.btn3 {
+	position: absolute; top: 485px; left: 260px; 
+	margin-left: unset;
+	width: 131px;
+	align-self: unset;
+}
+
+.symbol8 {
+	position: absolute; top: 611px; left: 72px; 
+}
+
+.subtitle-symbol2 {
+	position: absolute; top: 611px; left: 260px; right: 871px; 
+}
+
+.heroicons-solid-x2 {
+	top: 616px; right: 77px; 
+	width: 14px; height: 14px;
+}
+
+.btn-light1 {
+	top: 693px; 
+}
+
+.btn4 {
+	position: absolute; top: 693px; left: 260px; 
+	margin-left: unset;
+	width: 131px;
+	align-self: unset;
+}
+
+.symbol9 {
+	position: absolute; top: 819px; left: 72px; 
+}
+
+.subtitle-symbol3 {
+	position: absolute; top: 819px; left: 260px; right: 871px; 
+}
+
+.heroicons-solid-x3 {
+	top: 824px; right: 77px; 
+	width: 14px; height: 14px;
+}
+
+.frame2 {
+	top: 901px; 
+}
+
+.frame2 .frame-heroicons {
+	position: unset;
+	width: 21px; height: 21px;
+}
+
+.btn5 {
+	position: absolute; top: 901px; left: 260px; 
+	margin-left: unset;
+	width: 131px;
+	align-self: unset;
+}
+
+.symbol10 {
+	position: absolute; top: 1027px; left: 72px; 
+}
+
+.subtitle-symbol4 {
+	position: absolute; top: 1027px; left: 260px; right: 871px; 
+}
+
+.heroicons-solid-x4 {
+	top: 1032px; right: 77px; 
+	width: 14px; height: 14px;
+}
+
+.frame3 {
+	top: 1109px; 
+}
+
+.frame3 .frame-heroicons {
+	position: unset;
+	width: 21px; height: 21px;
+}
+
+.btn6 {
+	position: absolute; top: 1109px; left: 260px; 
+	margin-left: unset;
+	width: 131px;
+	align-self: unset;
+}
+
+.line1 {
+	margin-left: 72px; margin-right: 72px;
+	width: unset;
+}
+
+.line2 {
+	margin-left: 72px; margin-right: 72px; margin-top: 63px;
+	width: unset;
+}
+
+.line3 {
+	margin-left: 72px; margin-right: 72px; margin-top: 63px;
+	width: unset;
+}
+
+.line4 {
+	margin-left: 72px; margin-right: 72px; margin-top: 63px;
+	width: unset;
+}
+
+.line5 {
+	margin-left: 72px; margin-right: 72px; margin-top: 63px;
+	width: unset;
+}
+
+.footer1 .nav1 .nav-graphic2 {
+	width: 28px; height: 28px;
+}
+
+.footer1 .nav1 .nav-graphic-right {
+	width: 27px; height: 27px;
+}
+
+
+
+/** breakpoints (margin / paddings) **/
+
+@media screen and (max-width: 1024px) {
+	.line1 {
+		margin-inline: var(--margin-md);
+	}
+	.line2 {
+		margin-inline: var(--margin-md);
+	}
+	.line3 {
+		margin-inline: var(--margin-md);
+	}
+	.line4 {
+		margin-inline: var(--margin-md);
+	}
+	.line5 {
+		margin-inline: var(--margin-md);
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.line1 {
+		margin-inline: var(--margin-sm);
+	}
+	.line2 {
+		margin-inline: var(--margin-sm);
+	}
+	.line3 {
+		margin-inline: var(--margin-sm);
+	}
+	.line4 {
+		margin-inline: var(--margin-sm);
+	}
+	.line5 {
+		margin-inline: var(--margin-sm);
+	}
+}

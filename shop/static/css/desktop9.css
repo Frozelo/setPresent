@@ -1,0 +1,102 @@
+body {
+	gap: 69px;
+	padding-top: 133px;
+}
+
+.row1 {
+	color: #000;
+}
+
+.group1 .group-heroicons4 {
+	top: 11px; left: 25px; 
+	width: 21px; height: 21px;
+}
+
+.subtitle-set-present {
+	position: absolute; top: 46px; left: 131px; right: 1078px; 
+	color: #000;
+	text-transform: uppercase;
+}
+
+.heroicons-solid-user {
+	top: 56px; right: 76px; 
+	width: 16px; height: 21px;
+}
+
+.heroicons {
+	top: 56px; right: 122px; 
+	width: 21px; height: 20px;
+}
+
+.heroicons-solid-heart1 {
+	top: 57px; right: 170px; 
+	width: 20px; height: 18px;
+}
+
+.graphic1 {
+	position: absolute; top: 57px; left: 5%; 
+	width: 2%; height: 17px;
+}
+
+.text-plus {
+	position: absolute; top: 56px; right: 256px; 
+	color: #000;
+}
+
+.col4 {
+	margin: 0 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	color: #999;
+	font-weight: 400;
+	text-align: center;
+	background: linear-gradient(271deg, rgba(254, 206, 21, 0) 1%, rgba(254, 206, 21, 0.5) 99%) top left / auto auto no-repeat;
+	padding: 99px 24px 231px 24px;
+	border-radius: 52px;
+}
+
+.subtitle-symbol1 {
+	color: unset;
+}
+
+.input-symbol1 {
+	margin-top: 20px;
+	width: 100%;
+	max-width: 329px;
+	color: unset;
+}
+
+.btn-symbol1 {
+	width: 100%;
+	max-width: 329px;
+}
+
+.text-bottom {
+	margin-top: 5px;
+}
+
+.footer1 .footer-graphic2 {
+	width: 28px; height: 28px;
+}
+
+.footer1 .footer-graphic-right {
+	width: 27px; height: 27px;
+}
+
+
+
+/** breakpoints (margin / paddings) **/
+
+@media screen and (max-width: 1280px) {
+	.col4 {
+		padding-inline: var(--margin-sm);
+		margin-inline: var(--margin-md);
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.col4 {
+		margin-inline: var(--margin-sm);
+	}
+}

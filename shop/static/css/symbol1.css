@@ -1,0 +1,293 @@
+body {
+	gap: 19px;
+	padding-top: 826px;
+}
+
+.group1 .group-heroicons1 {
+	top: 11px; left: 25px; 
+	width: 21px; height: 21px;
+}
+
+.row1 {
+	color: #000;
+}
+
+.subtitle-set-present {
+	position: absolute; top: 46px; left: 131px; right: 1078px; 
+	color: #000;
+	text-transform: uppercase;
+}
+
+.heroicons-solid-user {
+	top: 56px; right: 76px; 
+	width: 16px; height: 21px;
+}
+
+.heroicons {
+	top: 56px; right: 122px; 
+	width: 21px; height: 20px;
+}
+
+.heroicons-solid-heart1 {
+	top: 57px; right: 170px; 
+	width: 20px; height: 18px;
+}
+
+.graphic1 {
+	position: absolute; top: 57px; left: 5%; 
+	width: 2%; height: 17px;
+}
+
+.text-plus {
+	position: absolute; top: 56px; right: 256px; 
+	color: #000;
+}
+
+.symbol7 {
+	position: absolute; top: 170px; left: 5%; 
+}
+
+.title-symbol {
+	position: absolute; top: 170px; left: 720px; right: 72px; 
+}
+
+.title2 {
+	position: absolute; top: 361px; left: 720px; right: 50px; 
+}
+
+.card7 {
+	top: 456px; right: 73px; 
+	gap: 32px;
+	color: #000;
+	background-color: #fece15;
+}
+
+.card7 .card-circle1 {
+	padding-left: 8px;
+	padding-top: 8px;
+	padding-bottom: 9px;
+	border: 1px solid #fff;
+}
+
+.card7 .card-heroicons4 {
+	width: 18px;
+}
+
+.card8 {
+	top: 456px; 
+}
+
+.card8 .card-heroicons5 {
+	position: absolute; top: 28%; left: 26%; 
+	width: 47%;
+	aspect-ratio: unset;
+}
+
+.card9 {
+	top: 456px; left: 939px; 
+	gap: 31px;
+	color: #fff;
+	background-color: #000;
+}
+
+.card9 .card-circle1 {
+	padding-left: 11px;
+	padding-top: 12px;
+	padding-right: 10px;
+}
+
+.card9 .card-heroicons4 {
+	width: 17px;
+}
+
+.line1 {
+	position: absolute; top: 575px; right: 72px; 
+	margin-left: auto; margin-right: auto; margin-top: unset;
+	width: 90%;
+	max-width: 648px;
+	flex-shrink: unset;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.row2 {
+	top: 592px; 
+}
+
+.line2 {
+	position: absolute; top: 629px; right: 72px; 
+	margin-left: auto; margin-right: auto; margin-top: unset;
+	width: 90%;
+	max-width: 648px;
+	flex-shrink: unset;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.row3 {
+	top: 646px; 
+}
+
+.line3 {
+	position: absolute; top: 683px; right: 72px; 
+	margin-left: auto; margin-right: auto; margin-top: unset;
+	width: 90%;
+	max-width: 648px;
+	flex-shrink: unset;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.row4 {
+	top: 700px; 
+}
+
+.line4 {
+	position: absolute; top: 737px; right: 72px; 
+	margin-left: auto; margin-right: auto; margin-top: unset;
+	width: 90%;
+	max-width: 648px;
+	flex-shrink: unset;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.col4 {
+	top: 937px; right: 72px; 
+}
+
+.col4 .card1 {
+	background-image: url(../assets/card/card3.png);
+}
+
+.col4 .card1 .card-heroicons1 {
+	top: 28%; left: 26%; 
+	width: 47%;
+}
+
+.col4 .card1 .circle-white-bottom {
+	position: static;
+	flex-shrink: 0;
+	padding: 13px 12px;
+}
+
+.col4 .card1 .circle-white-bottom .circle-white-heroicons {
+	position: unset;
+	width: 20px; height: 18px;
+}
+
+.col5 {
+	top: 941px; left: 50%; 
+	translate: -50% 0;
+	margin-left: 165px;
+}
+
+.col5 .card1 {
+	background-image: url(../assets/card/card2.png);
+}
+
+.col5 .card1 .card-heroicons1 {
+	top: 28%; left: 26%; 
+	width: 47%;
+}
+
+.col5 .card1 .circle-white-bottom {
+	position: static;
+	flex-shrink: 0;
+	padding: 13px 12px;
+}
+
+.col5 .card1 .circle-white-bottom .circle-white-heroicons {
+	position: unset;
+	width: 20px; height: 18px;
+}
+
+.col6 {
+	top: 943px; left: 72px; 
+}
+
+.col6 .card1 {
+	background-image: url(../assets/card/card3.png);
+}
+
+.col6 .card1 .card-heroicons1 {
+	top: 28%; left: 26%; 
+	width: 47%;
+}
+
+.col6 .card1 .circle-white-bottom {
+	position: static;
+	flex-shrink: 0;
+	padding: 13px 12px;
+}
+
+.col6 .card1 .circle-white-bottom .circle-white-heroicons {
+	position: unset;
+	width: 20px; height: 18px;
+}
+
+.col7 {
+	top: 943px; left: 50%; 
+	translate: -50% 0;
+	margin-left: -164px;
+}
+
+.col7 .card1 {
+	background-image: url(../assets/card/card.png);
+}
+
+.col7 .card1 .card-heroicons1 {
+	top: 28%; left: 26%; 
+	width: 47%;
+}
+
+.col7 .card1 .circle-white-bottom {
+	position: static;
+	flex-shrink: 0;
+	padding: 13px 12px;
+}
+
+.col7 .card1 .circle-white-bottom .circle-white-heroicons {
+	position: unset;
+	width: 20px; height: 18px;
+}
+
+.subtitle-symbol1 {
+	margin: 0 72px;
+}
+
+.line5 {
+	margin-left: 72px; margin-right: 72px; margin-top: 0;
+	width: unset;
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.footer1 {
+	margin-top: 582px;
+}
+
+.footer1 .nav1 .nav-graphic2 {
+	width: 28px; height: 28px;
+}
+
+.footer1 .nav1 .nav-graphic-right {
+	width: 27px; height: 27px;
+}
+
+
+
+/** breakpoints (margin / paddings) **/
+
+@media screen and (max-width: 1280px) {
+	.subtitle-symbol1 {
+		margin-inline: var(--margin-md);
+	}
+	.line5 {
+		margin-inline: var(--margin-md);
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.subtitle-symbol1 {
+		margin-inline: var(--margin-sm);
+	}
+	.line5 {
+		margin-inline: var(--margin-sm);
+	}
+}

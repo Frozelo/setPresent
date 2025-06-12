@@ -73,7 +73,7 @@ WSGI_APPLICATION = 'setPresent.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
+# https://docs.d2jangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
 

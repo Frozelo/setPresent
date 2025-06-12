@@ -9,9 +9,9 @@ def index(request):
     return render(request, 'shop/index.html', {'products': products})
 
 
-def product_detail(request, product_id):
-    product = get_object_or_404(Product, id=product_id)
-    return render(request, 'shop/product_detail.html', {'product': product})
+# def product_detail(request, product_id):
+#     product = get_object_or_404(Product, id=product_id)
+#     return render(request, 'shop/product_detail.html', {'product': product})
 
 
 def add_to_cart(request, product_id):
@@ -47,3 +47,38 @@ def checkout(request):
         return redirect('shop')
 
     return render(request, 'shop/checkout.html')
+
+
+# Главная страница
+def main_page(request):
+    return render(request, "mainpage.html")
+
+
+# Каталог
+def catalog(request):
+    return render(request, "catalog.html")
+
+
+def product_detail(request, product_id):
+    return render(request, "product_detail.html")
+
+
+def auth(request):
+    return render(request, "auth.html")
+
+
+def registration(request):
+    return render(request, "registration.html")
+
+
+# Линый кабинет
+def profile(request):
+    return render(request, "profile.html")
+
+
+# Корзина
+def cart(request):
+    return render(request, "cart.html")
+
+def favourites(request):
+    return render(request, "favourites.html")
