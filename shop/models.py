@@ -32,7 +32,10 @@ class Cart(models.Model):
 class CartItem(models.Model):
     id = models.AutoField(primary_key=True)
     cart_id = models.ForeignKey('Cart', on_delete=models.PROTECT)
-    product_id = models.OneToOneField('Product', on_delete=models.PROTECT)
+    # One product can appear in many cart items, so use ForeignKey instead of
+    # OneToOneField to avoid unique constraint issues when different users add
+    # the same product to their carts.
+    product_id = models.ForeignKey('Product', on_delete=models.PROTECT)
     quantity = models.PositiveIntegerField()
 
 
