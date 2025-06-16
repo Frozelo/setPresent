@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Каталог{% endblock %}
-{% block content %}
+{% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/desktop1.css' %}">
+{% endblock %}
+{% block body_class %}catalog-page{% endblock %}
+{% block content %}
 <div class="row-a row1">
     <object data="{% static 'assets/row/row-graphic.svg' %}" class="row-graphic" type="image/svg+xml"></object>
     <p class="row-text1">Поиск по каталогу</p>
