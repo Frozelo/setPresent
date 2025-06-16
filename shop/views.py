@@ -91,7 +91,7 @@ def product_detail(request, product_id):
     )
     return render(
         request,
-        "product2.html",
+        "product_detail.html",
         {"product2": product, "recommended": recommended},
     )
 
