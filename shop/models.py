@@ -21,7 +21,8 @@ class Category(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
 
-    def str(self):
+    def __str__(self):
+        """Return category name for admin and debugging."""
         return self.name
 
 
