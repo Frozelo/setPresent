@@ -146,7 +146,63 @@ def profile(request):
 
 
 def consturcot(request):
-    return render(request, "constructor.html")
+    """Entry point of the constructor redirects to the first step."""
+    return redirect("constructor_step", step=1)
+
+
+def constructor_step(request, step):
+    """Display products for the given step and remember the selection."""
+
+    step = int(step)
+    # IDs of product categories used in each step of the constructor.
+    STEP_CATEGORIES = [1, 2, 3]
+
+    if step < 1 or step > len(STEP_CATEGORIES):
+        return redirect("constructor_step", step=1)
+
+    category_id = STEP_CATEGORIES[step - 1]
+    products = Product.objects.filter(category_id=category_id)
+
+    if request.method == "POST":
+        product_id = request.POST.get("product_id")
+        if product_id:
+            selected = request.session.get("constructor_products", {})
+            selected[str(step)] = int(product_id)
+            request.session["constructor_products"] = selected
+            if step < len(STEP_CATEGORIES):
+                return redirect("constructor_step", step=step + 1)
+            else:
+                return redirect("constructor_finish")
+
+    return render(
+        request,
+        "constructor_step.html",
+        {"products": products, "step": step, "total_steps": len(STEP_CATEGORIES)},
+    )
+
+
+@login_required(login_url="auth")
+def constructor_finish(request):
+    """Create cart items from the constructor selections."""
+
+    selected = request.session.get("constructor_products")
+    if not selected:
+        return redirect("constructor_step", step=1)
+
+    cart, _ = Cart.objects.get_or_create(user_id=request.user)
+
+    for product_id in selected.values():
+        product = get_object_or_404(Product, id=product_id)
+        item, created = CartItem.objects.get_or_create(
+            cart_id=cart, product_id=product, defaults={"quantity": 1}
+        )
+        if not created:
+            item.quantity += 1
+            item.save()
+
+    request.session.pop("constructor_products", None)
+
+    return redirect("view_cart")
 
 
 # Корзина
