@@ -1,23 +1,24 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/reset.css" />
-	<link rel="stylesheet" href="css/global.css" />
-	<link rel="stylesheet" href="css/symbol.css" />
+	<link rel="stylesheet" href="{% static 'корзина/css/reset.css' %}" />
+	<link rel="stylesheet" href="{% static 'корзина/css/global.css' %}" />
+	<link rel="stylesheet" href="{% static 'корзина/css/symbol.css' %}" />
 
 </head>
 
 <body>
 	<div class="col1">
 		<div class="row-top">
-			<object data="assets/graphic1.svg" class="graphic-left1" type="image/svg+xml"></object>
+			<object data="{% static 'корзина/assets/graphic1.svg' %}" class="graphic-left1" type="image/svg+xml"></object>
 			<h2 class="subtitle-set-present">set present</h2>
 			
 			<div class="row1">
-				<object data="assets/graphic2.svg" class="graphic-left2" type="image/svg+xml"></object>
+				<object data="{% static 'корзина/assets/graphic2.svg' %}" class="graphic-left2" type="image/svg+xml"></object>
 				<p class="text-symbol1">Поиск по каталогу</p>
 			</div>
 			
@@ -25,11 +26,11 @@
 				<p class="text-plus">+7 (495) 488-72-72</p>
 				
 				<div class="group2">
-					<object data="assets/heroicons-outline-phone.svg" class="heroicons-outline-phone" type="image/svg+xml"></object>
+					<object data="{% static 'корзина/assets/heroicons-outline-phone.svg' %}" class="heroicons-outline-phone" type="image/svg+xml"></object>
 				</div>
 			</div>
 			
-			<object data="assets/graphic3.svg" class="graphic-right" type="image/svg+xml"></object>
+			<object data="{% static 'корзина/assets/graphic3.svg' %}" class="graphic-right" type="image/svg+xml"></object>
 		</div>
 		
 		<div class="col2">
@@ -39,7 +40,7 @@
 				<div class="col3">
 					<div class="row row3">
 						<div class="row-row">
-							<img src="assets/row-row/row-symbol.png" class="row-symbol" />
+							<img src="{% static 'корзина/assets/row-row/row-symbol.png' %}" class="row-symbol" />
 							
 							<div class="row-col">
 								<h2 class="row-subtitle">
@@ -51,7 +52,7 @@
 									<button class="row-btn hover-bright">8 775 ₽</button>
 									
 									<button class="btn-light-right hover-dark">
-										<object data="assets/btn-light/btn-light-icon-heros.svg" class="btn-light-icon-heros-solid-plus btn-light-icon-heros1" type="image/svg+xml"></object>
+										<object data="{% static 'корзина/assets/btn-light/btn-light-icon-heros.svg' %}" class="btn-light-icon-heros-solid-plus btn-light-icon-heros1" type="image/svg+xml"></object>
 										<p>1 шт</p>
 										
 										<div class="btn-light-icon-heros2">
@@ -62,12 +63,12 @@
 							</div>
 						</div>
 						
-						<object data="assets/row/row-heroicons.svg" class="row-heroicons-solid-x-mark row-heroicons" type="image/svg+xml"></object>
+						<object data="{% static 'корзина/assets/row/row-heroicons.svg' %}" class="row-heroicons-solid-x-mark row-heroicons" type="image/svg+xml"></object>
 					</div>
 					
 					<div class="row row4">
 						<div class="row-row">
-							<img src="assets/row-row/row-symbol.png" class="row-symbol" />
+							<img src="{% static 'корзина/assets/row-row/row-symbol.png' %}" class="row-symbol" />
 							
 							<div class="row-col">
 								<h2 class="row-subtitle">
@@ -79,7 +80,7 @@
 									<button class="row-btn hover-bright">8 775 ₽</button>
 									
 									<button class="btn-light-right hover-dark">
-										<object data="assets/btn-light/btn-light-icon-heros.svg" class="btn-light-icon-heros-solid-plus btn-light-icon-heros1" type="image/svg+xml"></object>
+										<object data="{% static 'корзина/assets/btn-light/btn-light-icon-heros.svg' %}" class="btn-light-icon-heros-solid-plus btn-light-icon-heros1" type="image/svg+xml"></object>
 										<p>1 шт</p>
 										
 										<div class="btn-light-icon-heros2">
@@ -90,12 +91,12 @@
 							</div>
 						</div>
 						
-						<object data="assets/row/row-heroicons.svg" class="row-heroicons-solid-x-mark row-heroicons" type="image/svg+xml"></object>
+						<object data="{% static 'корзина/assets/row/row-heroicons.svg' %}" class="row-heroicons-solid-x-mark row-heroicons" type="image/svg+xml"></object>
 					</div>
 					
 					<div class="row row5">
 						<div class="row-row">
-							<img src="assets/row-row/row-symbol.png" class="row-symbol" />
+							<img src="{% static 'корзина/assets/row-row/row-symbol.png' %}" class="row-symbol" />
 							
 							<div class="row-col">
 								<h2 class="row-subtitle">
@@ -107,7 +108,7 @@
 									<button class="row-btn hover-bright">8 775 ₽</button>
 									
 									<button class="btn-light-right hover-dark">
-										<object data="assets/btn-light/btn-light-icon-heros.svg" class="btn-light-icon-heros-solid-plus btn-light-icon-heros1" type="image/svg+xml"></object>
+										<object data="{% static 'корзина/assets/btn-light/btn-light-icon-heros.svg' %}" class="btn-light-icon-heros-solid-plus btn-light-icon-heros1" type="image/svg+xml"></object>
 										<p>1 шт</p>
 										
 										<div class="btn-light-icon-heros2">
@@ -118,12 +119,12 @@
 							</div>
 						</div>
 						
-						<object data="assets/row/row-heroicons.svg" class="row-heroicons-solid-x-mark row-heroicons" type="image/svg+xml"></object>
+						<object data="{% static 'корзина/assets/row/row-heroicons.svg' %}" class="row-heroicons-solid-x-mark row-heroicons" type="image/svg+xml"></object>
 					</div>
 					
 					<div class="row row6">
 						<div class="row-row">
-							<img src="assets/row-row/row-symbol.png" class="row-symbol" />
+							<img src="{% static 'корзина/assets/row-row/row-symbol.png' %}" class="row-symbol" />
 							
 							<div class="row-col">
 								<h2 class="row-subtitle">
@@ -135,7 +136,7 @@
 									<button class="row-btn hover-bright">8 775 ₽</button>
 									
 									<button class="btn-light-right hover-dark">
-										<object data="assets/btn-light/btn-light-icon-heros.svg" class="btn-light-icon-heros-solid-plus btn-light-icon-heros1" type="image/svg+xml"></object>
+										<object data="{% static 'корзина/assets/btn-light/btn-light-icon-heros.svg' %}" class="btn-light-icon-heros-solid-plus btn-light-icon-heros1" type="image/svg+xml"></object>
 										<p>1 шт</p>
 										
 										<div class="btn-light-icon-heros2">
@@ -146,7 +147,7 @@
 							</div>
 						</div>
 						
-						<object data="assets/row/row-heroicons.svg" class="row-heroicons-solid-x-mark row-heroicons" type="image/svg+xml"></object>
+						<object data="{% static 'корзина/assets/row/row-heroicons.svg' %}" class="row-heroicons-solid-x-mark row-heroicons" type="image/svg+xml"></object>
 					</div>
 				</div>
 				
@@ -181,7 +182,7 @@
 					</div>
 					
 					<div class="row-bottom">
-						<img src="assets/symbol.png" class="symbol2" />
+						<img src="{% static 'корзина/assets/symbol.png' %}" class="symbol2" />
 						<p class="text-symbol2">
 							После оформления заказа мы свяжемся с вами для уточнения всех деталей заказа и последующей оплаты.
 						</p>
@@ -196,11 +197,11 @@
 				
 				<div class="footer-nav-items1">
 					<div class="footer-circle">
-						<object data="assets/footer-graphic1.svg" class="footer-graphic1" type="image/svg+xml"></object>
+						<object data="{% static 'корзина/assets/footer-graphic1.svg' %}" class="footer-graphic1" type="image/svg+xml"></object>
 					</div>
 					
-					<object data="assets/footer-graphic2.svg" class="footer-graphic footer-graphic2" type="image/svg+xml"></object>
-					<object data="assets/footer-graphic3.svg" class="footer-graphic footer-graphic-right" type="image/svg+xml"></object>
+					<object data="{% static 'корзина/assets/footer-graphic2.svg' %}" class="footer-graphic footer-graphic2" type="image/svg+xml"></object>
+					<object data="{% static 'корзина/assets/footer-graphic3.svg' %}" class="footer-graphic footer-graphic-right" type="image/svg+xml"></object>
 				</div>
 			</div>
 			
