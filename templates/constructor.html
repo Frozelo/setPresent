@@ -1,188 +1,363 @@
-{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/constructor/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/constructor/global.css' %}">
-    <link rel="stylesheet" href="{% static 'css/constructor/symbol.css' %}">
+  <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/global.css" />
+	<link rel="stylesheet" href="css/symbol.css" />
+
 </head>
 
 <body>
-<div class="row-top">
-    <object data="{% static 'assets/graphic1.svg' %}" class="graphic-left1" type="image/svg+xml"></object>
-    <button class="btn-set-present hover-zoom">set present</button>
-
-    <div class="row1">
-        <object data="{% static 'assets/graphic2.svg' %}" class="graphic-left2" type="image/svg+xml"></object>
-        <p class="text-symbol1">Поиск по каталогу</p>
-    </div>
-
-    <div class="group1">
-        <p class="text-plus">+7 (495) 488-72-72</p>
-
-        <button class="btn2 hover-zoom">
-            <object data="{% static 'assets/btn-icon.svg' %}" class="heroicons-solid-chevron btn-icon2" type="image/svg+xml"></object>
-        </button>
-    </div>
-
-    <object data="{% static 'assets/graphic3.svg' %}" class="graphic-right" type="image/svg+xml"></object>
-</div>
-
-<div class="col2">
-    <div class="col-top">
-        <h1 class="title-symbol">Конструктор подарков</h1>
-        <h2 class="subtitle-symbol">Создай уникальный набор за 3 шага</h2>
-
-        <div class="row-bottom1">
-            <div class="row-left">
-                <div class="circle circle-yellow">
-                    <object data="{% static 'assets/circle/circle-heroicons1.svg' %}"
-                            class="circle-heroicons-solid-sparkles circle-heroicons" type="image/svg+xml"></object>
-                </div>
-                <div class="line line-right1"></div>
-            </div>
-
-            <div class="row2">
-                <div class="line"></div>
-                <div class="circle circle-light1">
-                    <object data="{% static 'assets/circle/circle-heroicons2.svg' %}"
-                            class="circle-heroicons-solid-sparkles circle-heroicons" type="image/svg+xml"></object>
-                </div>
-                <div class="line"></div>
-            </div>
-
-            <div class="row-right">
-                <div class="line"></div>
-                <div class="circle circle-light2">
-                    <object data="{% static 'assets/circle/circle-heroicons3.svg' %}"
-                            class="circle-heroicons-solid-sparkles circle-heroicons" type="image/svg+xml"></object>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="group2">
-        <div class="row3">
-            <h2 class="subtitle-left">1. Выберите упаковку</h2>
-
-            <button class="btn-white hover-dark">
-                <div class="btn-white-icon circle1">
-                    <object data="{% static 'assets/btn-white-heroicons.svg' %}"
-                            class="heroicons-solid-chevron btn-white-heroicons" type="image/svg+xml"></object>
-                </div>
-                <p class="label-symbol">Назад</p>
-            </button>
-
-            <button class="btn-white-right hover-dark">
-                <p class="label-symbol">Далее</p>
-                <div class="btn-white-right-icon circle1">
-                    <object data="{% static 'assets/btn-white-right-heroicons.svg' %}"
-                            class="heroicons-solid-chevron btn-white-right-heroicons" type="image/svg+xml"></object>
-                </div>
-            </button>
-        </div>
-
-        <div class="col3">
-            <div class="col4">
-                <!-- ========== карточки ========== -->
-                <div class="row row4">
-                    <div class="column col-left">
-                        <button class="btn hover-bright">
-                            <div class="btn-icon circle1">
-                                <object data="{% static 'assets/btn-icon-circle-white/btn-heroicons.svg' %}"
-                                        class="heroicons-solid-plus-a btn-heroicons" type="image/svg+xml"></object>
-                            </div>
-                        </button>
-
-                        <div class="column-col-bottom">
-                            <p>Подарочный набор<br>«Антрацит»</p>
-                            <button class="column-btn hover-bright btn-yellow">8 775 ₽</button>
-                        </div>
-                    </div>
-
-                    <div class="column col">
-                        <button class="btn hover-bright">
-                            <div class="btn-icon circle1">
-                                <object data="{% static 'assets/btn-icon-circle-white/btn-heroicons.svg' %}"
-                                        class="heroicons-solid-plus-a btn-heroicons" type="image/svg+xml"></object>
-                            </div>
-                        </button>
-
-                        <div class="column-col-bottom">
-                            <p>Подарочный набор<br>«Улыбайся чаще»</p>
-                            <button class="column-btn hover-bright btn-yellow">5 544 ₽</button>
-                        </div>
-                    </div>
-
-                    <div class="row-group-right">
-                        <div class="row-circle circle1">
-                            <object data="{% static 'assets/btn-icon-circle-white/btn-heroicons.svg' %}"
-                                    class="heroicons-solid-plus-a row-heroicons" type="image/svg+xml"></object>
-                        </div>
-
-                        <div class="row-col">
-                            <img src="{% static 'assets/row-column/row-symbol.png' %}" class="row-symbol" alt="">
-                            <div class="row-col-bottom">
-                                <p>Подарочный набор<br>«Красота-это ты!»</p>
-                                <button class="row-btn btn-yellow hover-bright">4 900 ₽</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- … повторяющиеся ряды row5 → row7 (внутри них те же подстановки static) … -->
-            </div>
-
-            <div class="row-bottom2">
-                <p class="text-symbol2">Показать еще</p>
-                <div class="circle-black-right">
-                    <object data="{% static 'assets/btn-icon-circle-white/btn-heroicons.svg' %}"
-                            class="heroicons-solid-plus-b heroicons-solid-plus1" type="image/svg+xml"></object>
-                </div>
-            </div>
-        </div>
-
-        <!-- фильтры -->
-        <div class="card1">
-            <!-- … текст без изменений … -->
-        </div>
-
-        <div class="card2">
-            <!-- … текст без изменений … -->
-        </div>
-
-        <button class="btn-symbol btn3 hover-dark">Сбросить</button>
-        <button class="btn-symbol btn-symbol1 hover-dark">Показать</button>
-    </div>
-</div>
-
-<footer class="footer">
-    <div class="footer-nav">
-        <h2 class="footer-subtitle">set present</h2>
-
-        <div class="footer-nav-items1">
-            <div class="footer-circle">
-                <object data="{% static 'assets/footer-graphic1.svg' %}" class="footer-graphic1" type="image/svg+xml"></object>
-            </div>
-
-            <object data="{% static 'assets/footer-graphic2.svg' %}" class="footer-graphic footer-graphic2"
-                    type="image/svg+xml"></object>
-            <object data="{% static 'assets/footer-graphic3.svg' %}" class="footer-graphic footer-graphic-right"
-                    type="image/svg+xml"></object>
-        </div>
-    </div>
-
-    <div class="footer-nav-items2">
-        <p class="footer-text-symbol">каталог</p>
-        <p class="footer-text-symbol">конструктор</p>
-        <p class="footer-text-symbol">о компании</p>
-        <p class="footer-text-symbol">контакты</p>
-        <p class="footer-text-symbol">Доставка</p>
-    </div>
-</footer>
+	<div class="row-top">
+		<object data="assets/graphic1.svg" class="graphic-left1" type="image/svg+xml"></object>
+		<button class="btn-set-present hover-zoom">set present</button>
+		
+		<div class="row1">
+			<object data="assets/graphic2.svg" class="graphic-left2" type="image/svg+xml"></object>
+			<p class="text-symbol1">Поиск по каталогу</p>
+		</div>
+		
+		<div class="group1">
+			<p class="text-plus">+7 (495) 488-72-72</p>
+			
+			<button class="btn2 hover-zoom">
+				<object data="assets/btn-icon.svg" class="heroicons-solid-chevron btn-icon2" type="image/svg+xml"></object>
+			</button>
+		</div>
+		
+		<object data="assets/graphic3.svg" class="graphic-right" type="image/svg+xml"></object>
+	</div>
+	
+	<div class="col2">
+		<div class="col-top">
+			<h1 class="title-symbol">Конструктор подарков</h1>
+			<h2 class="subtitle-symbol">Создай уникальный набор за 3 шага</h2>
+			
+			<div class="row-bottom1">
+				<div class="row-left">
+					<div class="circle circle-yellow">
+						<object data="assets/circle/circle-heroicons1.svg" class="circle-heroicons-solid-sparkles circle-heroicons" type="image/svg+xml"></object>
+					</div>
+					
+					<div class="line line-right1"></div>
+				</div>
+				
+				<div class="row2">
+					<div class="line"></div>
+					
+					<div class="circle circle-light1">
+						<object data="assets/circle/circle-heroicons2.svg" class="circle-heroicons-solid-sparkles circle-heroicons" type="image/svg+xml"></object>
+					</div>
+					
+					<div class="line"></div>
+				</div>
+				
+				<div class="row-right">
+					<div class="line"></div>
+					
+					<div class="circle circle-light2">
+						<object data="assets/circle/circle-heroicons3.svg" class="circle-heroicons-solid-sparkles circle-heroicons" type="image/svg+xml"></object>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="group2">
+			<div class="row3">
+				<h2 class="subtitle-left">1. Выберите упаковку</h2>
+				
+				<button class="btn-white hover-dark">
+					<div class="btn-white-icon circle1">
+						<object data="assets/btn-white-heroicons.svg" class="heroicons-solid-chevron btn-white-heroicons" type="image/svg+xml"></object>
+					</div>
+					
+					<p class="label-symbol">Назад</p>
+				</button>
+				
+				<button class="btn-white-right hover-dark">
+					<p class="label-symbol">Далее</p>
+					
+					<div class="btn-white-right-icon circle1">
+						<object data="assets/btn-white-right-heroicons.svg" class="heroicons-solid-chevron btn-white-right-heroicons" type="image/svg+xml"></object>
+					</div>
+				</button>
+			</div>
+			
+			<div class="col3">
+				<div class="col4">
+					<div class="row row4">
+						<div class="column col-left">
+							<button class="btn hover-bright">
+								<div class="btn-icon circle1">
+									<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a btn-heroicons" type="image/svg+xml"></object>
+								</div>
+							</button>
+							
+							<div class="column-col-bottom">
+								<p>
+									Подарочный набор<br />
+									«Антрацит»
+								</p>
+								<button class="column-btn hover-bright btn-yellow">8 775 ₽</button>
+							</div>
+						</div>
+						
+						<div class="column col">
+							<button class="btn hover-bright">
+								<div class="btn-icon circle1">
+									<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a btn-heroicons" type="image/svg+xml"></object>
+								</div>
+							</button>
+							
+							<div class="column-col-bottom">
+								<p>
+									Подарочный набор<br />
+									«Улыбайся чаще»
+								</p>
+								<button class="column-btn hover-bright btn-yellow">5 544 ₽</button>
+							</div>
+						</div>
+						
+						<div class="row-group-right">
+							<div class="row-circle circle1">
+								<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a row-heroicons" type="image/svg+xml"></object>
+							</div>
+							
+							<div class="row-col">
+								<img src="assets/row-column/row-symbol.png" class="row-symbol" />
+								
+								<div class="row-col-bottom">
+									<p>
+										Подарочный набор<br />
+										«Красота-это ты!»
+									</p>
+									<button class="row-btn btn-yellow hover-bright">4 900 ₽</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row row5">
+						<div class="column col-left">
+							<button class="btn hover-bright">
+								<div class="btn-icon circle1">
+									<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a btn-heroicons" type="image/svg+xml"></object>
+								</div>
+							</button>
+							
+							<div class="column-col-bottom">
+								<p>
+									Подарочный набор<br />
+									«Антрацит»
+								</p>
+								<button class="column-btn hover-bright btn-yellow">8 775 ₽</button>
+							</div>
+						</div>
+						
+						<div class="column col">
+							<button class="btn hover-bright">
+								<div class="btn-icon circle1">
+									<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a btn-heroicons" type="image/svg+xml"></object>
+								</div>
+							</button>
+							
+							<div class="column-col-bottom">
+								<p>
+									Подарочный набор<br />
+									«Улыбайся чаще»
+								</p>
+								<button class="column-btn hover-bright btn-yellow">5 544 ₽</button>
+							</div>
+						</div>
+						
+						<div class="row-group-right">
+							<div class="row-circle circle1">
+								<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a row-heroicons" type="image/svg+xml"></object>
+							</div>
+							
+							<div class="row-col">
+								<img src="assets/row-column/row-symbol.png" class="row-symbol" />
+								
+								<div class="row-col-bottom">
+									<p>
+										Подарочный набор<br />
+										«Красота-это ты!»
+									</p>
+									<button class="row-btn btn-yellow hover-bright">4 900 ₽</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row row6">
+						<div class="column col-left">
+							<button class="btn hover-bright">
+								<div class="btn-icon circle1">
+									<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a btn-heroicons" type="image/svg+xml"></object>
+								</div>
+							</button>
+							
+							<div class="column-col-bottom">
+								<p>
+									Подарочный набор<br />
+									«Антрацит»
+								</p>
+								<button class="column-btn hover-bright btn-yellow">8 775 ₽</button>
+							</div>
+						</div>
+						
+						<div class="column col">
+							<button class="btn hover-bright">
+								<div class="btn-icon circle1">
+									<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a btn-heroicons" type="image/svg+xml"></object>
+								</div>
+							</button>
+							
+							<div class="column-col-bottom">
+								<p>
+									Подарочный набор<br />
+									«Улыбайся чаще»
+								</p>
+								<button class="column-btn hover-bright btn-yellow">5 544 ₽</button>
+							</div>
+						</div>
+						
+						<div class="row-group-right">
+							<div class="row-circle circle1">
+								<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a row-heroicons" type="image/svg+xml"></object>
+							</div>
+							
+							<div class="row-col">
+								<img src="assets/row-column/row-symbol.png" class="row-symbol" />
+								
+								<div class="row-col-bottom">
+									<p>
+										Подарочный набор<br />
+										«Красота-это ты!»
+									</p>
+									<button class="row-btn btn-yellow hover-bright">4 900 ₽</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row row7">
+						<div class="column col-left">
+							<button class="btn hover-bright">
+								<div class="btn-icon circle1">
+									<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a btn-heroicons" type="image/svg+xml"></object>
+								</div>
+							</button>
+							
+							<div class="column-col-bottom">
+								<p>
+									Подарочный набор<br />
+									«Антрацит»
+								</p>
+								<button class="column-btn hover-bright btn-yellow">8 775 ₽</button>
+							</div>
+						</div>
+						
+						<div class="column col">
+							<button class="btn hover-bright">
+								<div class="btn-icon circle1">
+									<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a btn-heroicons" type="image/svg+xml"></object>
+								</div>
+							</button>
+							
+							<div class="column-col-bottom">
+								<p>
+									Подарочный набор<br />
+									«Улыбайся чаще»
+								</p>
+								<button class="column-btn hover-bright btn-yellow">5 544 ₽</button>
+							</div>
+						</div>
+						
+						<div class="row-group-right">
+							<div class="row-circle circle1">
+								<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-a row-heroicons" type="image/svg+xml"></object>
+							</div>
+							
+							<div class="row-col">
+								<img src="assets/row-column/row-symbol.png" class="row-symbol" />
+								
+								<div class="row-col-bottom">
+									<p>
+										Подарочный набор<br />
+										«Красота-это ты!»
+									</p>
+									<button class="row-btn btn-yellow hover-bright">4 900 ₽</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row-bottom2">
+					<p class="text-symbol2">Показать еще</p>
+					
+					<div class="circle-black-right">
+						<object data="assets/btn-icon-circle-white/btn-heroicons.svg" class="heroicons-solid-plus-b heroicons-solid-plus1" type="image/svg+xml"></object>
+					</div>
+				</div>
+			</div>
+			
+			<div class="card1">
+				<p class="card-text-symbol">Для него</p>
+				<p class="card-text-symbol card-text-symbol-active">Для нее</p>
+				<p class="card-text-symbol">Новый год</p>
+				<p class="card-text-symbol">23 февраля</p>
+				<p class="card-text-symbol">День рождения</p>
+				<p class="card-text-symbol">8 марта</p>
+				<p class="card-text-symbol">День учителя</p>
+			</div>
+			
+			<div class="card2">
+				<p class="card-text-top">Цена</p>
+				
+				<div class="card-row">
+					<div class="card-line"></div>
+					<div class="card-circle-black card-circle-black-left"></div>
+					<div class="card-circle-black card-circle-black-right"></div>
+				</div>
+				
+				<div class="card-row-bottom">
+					<p class="card-text4">350 ₽</p>
+					<p class="card-text5">11406₽</p>
+				</div>
+			</div>
+			
+			<button class="btn-symbol btn3 hover-dark">Сбросить</button>
+			<button class="btn-symbol btn-symbol1 hover-dark">Показать</button>
+		</div>
+	</div>
+	
+	<footer class="footer">
+		<div class="footer-nav">
+			<h2 class="footer-subtitle">set present</h2>
+			
+			<div class="footer-nav-items1">
+				<div class="footer-circle">
+					<object data="assets/footer-graphic1.svg" class="footer-graphic1" type="image/svg+xml"></object>
+				</div>
+				
+				<object data="assets/footer-graphic2.svg" class="footer-graphic footer-graphic2" type="image/svg+xml"></object>
+				<object data="assets/footer-graphic3.svg" class="footer-graphic footer-graphic-right" type="image/svg+xml"></object>
+			</div>
+		</div>
+		
+		<div class="footer-nav-items2">
+			<p class="footer-text-symbol">каталог</p>
+			<p class="footer-text-symbol">конструктор</p>
+			<p class="footer-text-symbol">о компании</p>
+			<p class="footer-text-symbol">контакты</p>
+			<p class="footer-text-symbol">Доставка</p>
+		</div>
+	</footer>
 </body>
+
 </html>

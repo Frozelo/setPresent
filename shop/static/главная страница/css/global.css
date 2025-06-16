@@ -1,0 +1,63 @@
+
+:root {
+	/* color variables */
+	--divider-divider: #595959;
+
+	/* responsive margins / paddings */
+	--margin-sm: 16px;
+	--margin-md: 32px;
+}
+
+* {
+	--min-screen-size: 430;
+	--max-screen-size: 1440;
+	--interpolate-diff: calc(var(--max-font-size) - var(--min-font-size));
+	--interpolate: clamp(calc(var(--min-font-size) * 1px), calc((var(--min-font-size) * 1px) + var(--interpolate-diff) * ((100vw - calc(var(--min-screen-size) * 1px)) / (var(--max-screen-size) - var(--min-screen-size)))), calc(var(--max-font-size) * 1px));
+}
+
+html {
+	height: 100%;
+	font-size: 16px;
+}
+
+
+
+/* text utility classes */
+
+.text {
+	font-style: normal;
+	letter-spacing: 0px;
+}
+
+
+
+/* ui objects utility classes */
+
+.card {
+	width: 248px; height: 247px;
+	background-position: top left;
+	background-size: auto auto;
+	background-repeat: no-repeat;
+	border-radius: 30px;
+}
+
+.input {
+	width: 248px;
+	border-radius: 30px;
+}
+
+
+
+/* button hover utility classes */
+
+.hover-bright:hover {
+	filter: brightness(1.2);
+}
+
+.hover-dark:hover {
+	filter: brightness(0.85);
+}
+
+.hover-zoom:hover {
+	scale: 1.05;
+}
