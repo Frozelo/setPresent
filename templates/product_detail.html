@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}{{ product.name }}{% endblock %}
-{% block content %}
+{% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/symbol2.css' %}">
+{% endblock %}
+{% block body_class %}product-page{% endblock %}
+{% block content %}
   <div class="group-c group1">
     <object data="{% static 'assets/btn-icon.svg' %}" class="heroicons-solid-heart-a group-heroicons1" type="image/svg+xml"></object>
   </div>
