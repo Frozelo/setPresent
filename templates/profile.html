@@ -26,7 +26,12 @@
     </div>
   </div>
 
-  <h1 class="title-symbol title">Личный кабинет</h1>
+<h1 class="title-symbol title">Личный кабинет</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Сохранить</button>
+</form>
 
   <div class="group2">
     <h2 class="subtitle-symbol1">Личный данные</h2>
@@ -145,10 +150,15 @@
   </div>
 
   <h2 class="subtitle-symbol3 subtitle4">История заказов</h2>
-  <div class="line-c line1"></div>
-  <div class="line-c"></div>
-  <div class="line-c"></div>
-  <div class="line-c"></div>
+  <ul>
+  {% for order in orders %}
+      <li>
+        {{ order.order_date }} - {{ order.orderitem_set.all|length }} товаров
+      </li>
+  {% empty %}
+      <li>История пуста.</li>
+  {% endfor %}
+  </ul>
   <h2 class="subtitle-symbol4 subtitle4">Текущие заказы</h2>
   <div class="line-c line5"></div>
   <div class="line-c"></div>

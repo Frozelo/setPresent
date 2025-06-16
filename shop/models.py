@@ -38,9 +38,13 @@ class CartItem(models.Model):
 
 class Order(models.Model):
     id = models.AutoField(primary_key=True)
-    user_id = models.ForeignKey(User, on_delete=models.PROTECT)
+    user_id = models.ForeignKey(User, on_delete=models.PROTECT, null=True, blank=True)
+    name = models.CharField(max_length=255, blank=True, null=True)
+    phone = models.CharField(max_length=50, blank=True, null=True)
+    address = models.CharField(max_length=255, blank=True, null=True)
+    email = models.EmailField(blank=True, null=True)
     order_date = models.DateTimeField(auto_now_add=True)
-    user_comment = models.TextField()
+    user_comment = models.TextField(blank=True)
 
 
 class OrderItem(models.Model):

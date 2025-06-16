@@ -54,13 +54,9 @@
             {% else %}
                 <p>Ваша корзина пуста. Невозможно оформить заказ.</p>
                 <a class="button" href="{% url 'index' %}">Назад к списку продуктов</a>
-                return
-            {% endif %}
+                {% endif %}
         </div>
-        <div>
-            <label for="comment">Комментарий к заказу:</label><br>
-            <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Введите ваш комментарий..."></textarea>
-        </div>
+        {{ form.as_p }}
         <button type="submit" class="button">Подтвердить заказ</button>
     </form>
     <a class="button" href="{% url 'view_cart' %}">Назад в корзину</a>
