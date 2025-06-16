@@ -145,8 +145,36 @@ def consturcot(request):
 
 
 # Корзина
+@login_required(login_url="auth")
 def cart(request):
-    return render(request, "cart.html")
+    cart = get_object_or_404(Cart, user_id=request.user)
+    cart_items = CartItem.objects.filter(cart_id=cart)
+    order_created = False
+
+    if request.method == "POST":
+        form = OrderForm(request.POST)
+        if form.is_valid() and cart_items.exists():
+            order = form.save(commit=False)
+            order.user_id = request.user
+            order.save()
+            for item in cart_items:
+                OrderItem.objects.create(
+                    order_id=order,
+                    product_id=item.product_id,
+                    quantity=item.quantity,
+                    price=item.product_id.price,
+                )
+            cart_items.delete()
+            order_created = True
+            form = OrderForm()
+    else:
+        form = OrderForm()
+
+    return render(
+        request,
+        "cart.html",
+        {"cart_items": cart_items, "form": form, "order_created": order_created},
+    )
 
 
 def favourites(request):
