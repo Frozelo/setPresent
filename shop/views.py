@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import login, authenticate
-from user.forms import RegistrationForm, LoginForm
+from user.forms import RegistrationForm, LoginForm, ProfileForm
+from shop.forms import OrderForm
 
 from shop.models import Product, Cart, CartItem, Order, OrderItem
 
@@ -36,18 +37,32 @@ def view_cart(request):
 
 def checkout(request):
     cart = get_object_or_404(Cart, user_id=request.user)
-    print(cart)
     cart_items = CartItem.objects.filter(cart_id=cart)
 
-    if cart_items.exists():
-        order = Order.objects.create(user_id=request.user, user_comment=request.POST.get('comment', ''))
-        for item in cart_items:
-            OrderItem.objects.create(order_id=order, product_id=item.product_id, quantity=item.quantity,
-                                     price=item.product_id.price)
-        cart_items.delete()
-        return redirect('shop')
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+        if form.is_valid() and cart_items.exists():
+            order = form.save(commit=False)
+            if request.user.is_authenticated:
+                order.user_id = request.user
+            order.save()
+            for item in cart_items:
+                OrderItem.objects.create(
+                    order_id=order,
+                    product_id=item.product_id,
+                    quantity=item.quantity,
+                    price=item.product_id.price,
+                )
+            cart_items.delete()
+            return redirect('catalog')
+    else:
+        form = OrderForm()
 
-    return render(request, 'shop/checkout.html')
+    return render(
+        request,
+        'shop/checkout.html',
+        {'cart_items': cart_items, 'form': form},
+    )
 
 
 # Главная страница
@@ -63,7 +78,16 @@ def catalog(request):
 
 def product_detail(request, product_id):
     product = get_object_or_404(Product, id=product_id)
-    return render(request, "product_detail.html", {"product": product})
+    recommended = (
+        Product.objects.filter(category=product.category)
+        .exclude(id=product.id)
+        .order_by("?")[:5]
+    )
+    return render(
+        request,
+        "product_detail.html",
+        {"product": product, "recommended": recommended},
+    )
 
 
 def auth(request):
@@ -92,7 +116,22 @@ def registration(request):
 
 # Линый кабинет
 def profile(request):
-    return render(request, "profile.html")
+    if not request.user.is_authenticated:
+        return redirect("auth")
+
+    if request.method == "POST":
+        form = ProfileForm(request.POST, instance=request.user)
+        if form.is_valid():
+            form.save()
+    else:
+        form = ProfileForm(instance=request.user)
+
+    orders = (
+        Order.objects.filter(user_id=request.user)
+        .prefetch_related("orderitem_set")
+        .order_by("-order_date")
+    )
+    return render(request, "profile.html", {"form": form, "orders": orders})
 
 
 # Корзина
