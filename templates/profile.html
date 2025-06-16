@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}Профиль{% endblock %}
-{% block content %}
+{% block extra_css %}
 <link rel="stylesheet" href="{% static 'css/desktop6.css' %}">
+{% endblock %}
+{% block body_class %}profile-page{% endblock %}
+{% block content %}
   <div class="group1 btn1">
     <object data="{% static 'assets/btn-icon.svg' %}" class="heroicons-solid-heart-b heroicons-outline-phone" type="image/svg+xml"></object>
   </div>
