@@ -140,9 +140,14 @@ def profile(request):
     return render(request, "profile.html", {"form": form, "orders": orders})
 
 
+def consturcot(request):
+    return render(request, "constructor.html")
+
+
 # Корзина
 def cart(request):
     return render(request, "cart.html")
+
 
 def favourites(request):
     return render(request, "favourites.html")
