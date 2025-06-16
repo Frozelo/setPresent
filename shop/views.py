@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth import login, authenticate
+from django.contrib.auth.decorators import login_required
 from user.forms import RegistrationForm, LoginForm, ProfileForm
 from shop.forms import OrderForm
 
@@ -16,12 +17,15 @@ def index(request):
 #     return render(request, 'shop/product_detail.html', {'product': product})
 
 
+@login_required(login_url='auth')
 def add_to_cart(request, product_id):
     product = get_object_or_404(Product, id=product_id)
 
-    cart, created = Cart.objects.get_or_create(user_id=request.user)
+    cart, _ = Cart.objects.get_or_create(user_id=request.user)
 
-    cart_item, created = CartItem.objects.get_or_create(cart_id=cart, product_id=product)
+    cart_item, created = CartItem.objects.get_or_create(
+        cart_id=cart, product_id=product, defaults={'quantity': 1}
+    )
     if not created:
         cart_item.quantity += 1
         cart_item.save()
@@ -29,12 +33,14 @@ def add_to_cart(request, product_id):
     return redirect('view_cart')
 
 
+@login_required(login_url='auth')
 def view_cart(request):
     cart = get_object_or_404(Cart, user_id=request.user)
     cart_items = CartItem.objects.filter(cart_id=cart)
     return render(request, 'shop/view_cart.html', {'cart_items': cart_items})
 
 
+@login_required(login_url='auth')
 def checkout(request):
     cart = get_object_or_404(Cart, user_id=request.user)
     cart_items = CartItem.objects.filter(cart_id=cart)
