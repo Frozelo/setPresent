@@ -1,65 +1,29 @@
-{% extends 'base.html' %}
 {% load static %}
 {% block title %}Каталог{% endblock %}
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/desktop1.css' %}">
-<div class="row-a row1">
-    <object data="{% static 'assets/row/row-graphic.svg' %}" class="row-graphic" type="image/svg+xml"></object>
-    <p class="row-text1">Поиск по каталогу</p>
-</div>
+    <link rel="stylesheet" href="{% static 'css/desktop1.css' %}">
+    <div class="row-a row1">
+        <object data="{% static 'assets/row/row-graphic.svg' %}" class="row-graphic" type="image/svg+xml"></object>
+        <p class="row-text1">Поиск по каталогу</p>
+    </div>
 
-<div class="group1 btn1">
-    <object data="{% static 'assets/btn-icon.svg' %}" class="heroicons-solid-heart-a heroicons-outline-phone"
+    <div class="group1 btn1">
+        <object data="{% static 'assets/btn-icon.svg' %}" class="heroicons-solid-heart-a heroicons-outline-phone"
+                type="image/svg+xml"></object>
+    </div>
+
+    <h2 class="subtitle-set-present text1">set present</h2>
+    <object data="{% static 'assets/header-heroicons.svg' %}" class="heroicons-solid-heart-a heroicons-solid-user"
             type="image/svg+xml"></object>
-</div>
+    <object data="{% static 'assets/header-heroicons-465.svg' %}" class="heroicons-solid-heart-a heroicons"
+            type="image/svg+xml"></object>
+    <object data="{% static 'assets/header-heroicons-321.svg' %}" class="heroicons-solid-heart-a heroicons-solid-heart1"
+            type="image/svg+xml"></object>
+    <object data="{% static 'assets/header-graphic.svg' %}" class="graphic1" type="image/svg+xml"></object>
+    <p class="text-plus text3">+7 (495) 488-72-72</p>
 
-<h2 class="subtitle-set-present text1">set present</h2>
-<object data="{% static 'assets/header-heroicons.svg' %}" class="heroicons-solid-heart-a heroicons-solid-user"
-        type="image/svg+xml"></object>
-<object data="{% static 'assets/header-heroicons-465.svg' %}" class="heroicons-solid-heart-a heroicons"
-        type="image/svg+xml"></object>
-<object data="{% static 'assets/header-heroicons-321.svg' %}" class="heroicons-solid-heart-a heroicons-solid-heart1"
-        type="image/svg+xml"></object>
-<object data="{% static 'assets/header-graphic.svg' %}" class="graphic1" type="image/svg+xml"></object>
-<p class="text-plus text3">+7 (495) 488-72-72</p>
-
-<div class="group2">
-    <div class="card-a card7">
-        <div class="card-circle-white-top1 circle-white2">
-            <object data="{% static 'assets/card-circle-white/card-heroicons.svg' %}"
-                    class="heroicons-solid-heart-a card-heroicons1" type="image/svg+xml"></object>
-        </div>
-        <div class="circle-white-a circle-white-bottom">
-            <object data="{% static 'assets/circle-white/circle-white-heroicons.svg' %}"
-                    class="heroicons-solid-heart-a circle-white-heroicons" type="image/svg+xml"></object>
-        </div>
-    </div>
-    <div class="column-b col4">
-        <p class="column-text1">
-            Подарочный набор<br/>
-            «Антрацит»
-        </p>
-        <button class="btn-a column-btn1 hover-fx">8 775 ₽</button>
-    </div>
-    <div class="card-a card8">
-        <div class="card-circle-white-top1 circle-white2">
-            <object data="{% static 'assets/card-circle-white/card-heroicons.svg' %}"
-                    class="heroicons-solid-heart-a card-heroicons1" type="image/svg+xml"></object>
-        </div>
-        <div class="circle-white-a circle-white-bottom">
-            <object data="{% static 'assets/circle-white/circle-white-heroicons.svg' %}"
-                    class="heroicons-solid-heart-a circle-white-heroicons" type="image/svg+xml"></object>
-        </div>
-    </div>
-    <div class="column-b col5">
-        <p class="column-text1">
-            Подарочный набор<br/>
-            «Улыбайся чаще»
-        </p>
-        <button class="btn-a column-btn1 hover-fx">5 544 ₽</button>
-    </div>
-    <div class="column-c col6">
-        <div class="card-a card1">
+    <div class="group2">
+        <div class="card-a card7">
             <div class="card-circle-white-top1 circle-white2">
                 <object data="{% static 'assets/card-circle-white/card-heroicons.svg' %}"
                         class="heroicons-solid-heart-a card-heroicons1" type="image/svg+xml"></object>
@@ -69,76 +33,111 @@
                         class="heroicons-solid-heart-a circle-white-heroicons" type="image/svg+xml"></object>
             </div>
         </div>
-        <div class="column-b col-bottom1">
+        <div class="column-b col4">
             <p class="column-text1">
                 Подарочный набор<br/>
-                «Красота-это ты!»
+                «Антрацит»
             </p>
-            <button class="btn-a column-btn1 hover-fx">4 900 ₽</button>
+            <button class="btn-a column-btn1 hover-fx">8 775 ₽</button>
+        </div>
+        <div class="card-a card8">
+            <div class="card-circle-white-top1 circle-white2">
+                <object data="{% static 'assets/card-circle-white/card-heroicons.svg' %}"
+                        class="heroicons-solid-heart-a card-heroicons1" type="image/svg+xml"></object>
+            </div>
+            <div class="circle-white-a circle-white-bottom">
+                <object data="{% static 'assets/circle-white/circle-white-heroicons.svg' %}"
+                        class="heroicons-solid-heart-a circle-white-heroicons" type="image/svg+xml"></object>
+            </div>
+        </div>
+        <div class="column-b col5">
+            <p class="column-text1">
+                Подарочный набор<br/>
+                «Улыбайся чаще»
+            </p>
+            <button class="btn-a column-btn1 hover-fx">5 544 ₽</button>
+        </div>
+        <div class="column-c col6">
+            <div class="card-a card1">
+                <div class="card-circle-white-top1 circle-white2">
+                    <object data="{% static 'assets/card-circle-white/card-heroicons.svg' %}"
+                            class="heroicons-solid-heart-a card-heroicons1" type="image/svg+xml"></object>
+                </div>
+                <div class="circle-white-a circle-white-bottom">
+                    <object data="{% static 'assets/circle-white/circle-white-heroicons.svg' %}"
+                            class="heroicons-solid-heart-a circle-white-heroicons" type="image/svg+xml"></object>
+                </div>
+            </div>
+            <div class="column-b col-bottom1">
+                <p class="column-text1">
+                    Подарочный набор<br/>
+                    «Красота-это ты!»
+                </p>
+                <button class="btn-a column-btn1 hover-fx">4 900 ₽</button>
+            </div>
         </div>
     </div>
-</div>
 
-<div class="group-b group3">
-    <div class="group-circle-black group-circle-black1"></div>
-    <div class="group-circle-black group-circle-black2"></div>
-    <div class="group-line"></div>
-    <p class="group-text1">350 ₽</p>
-    <p class="group-text2">11406₽</p>
-    <p class="group-text-symbol">Цена</p>
-</div>
-
-<div class="card9 box2">
-    <p class="text-symbol-a">Для него</p>
-    <p class="text-symbol-a card-text-symbol-active">Для нее</p>
-    <p class="text-symbol-a">Новый год</p>
-    <p class="text-symbol-a">23 февраля</p>
-    <p class="text-symbol-a">День рождения</p>
-    <p class="text-symbol-a">8 марта</p>
-    <p class="text-symbol-a">День учителя</p>
-</div>
-
-<button class="btn-symbol-a btn-symbol1 hover-fx">Сбросить</button>
-<button class="btn-symbol-a btn-symbol2 hover-fx">Показать</button>
-
-<div class="column-d col7">
-    <div class="product-list">
-        {% for product in products %}
-        <div class="product">
-            {% if product.image %}
-            <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 150px;">
-            {% endif %}
-            <p>{{ product.name }}</p>
-            <p>{{ product.price }} ₽</p>
-            <a href="{% url 'product_detail' product.id %}">Подробнее</a>
-        </div>
-        {% empty %}
-        <p>Нет доступных продуктов.</p>
-        {% endfor %}
+    <div class="group-b group3">
+        <div class="group-circle-black group-circle-black1"></div>
+        <div class="group-circle-black group-circle-black2"></div>
+        <div class="group-line"></div>
+        <p class="group-text1">350 ₽</p>
+        <p class="group-text2">11406₽</p>
+        <p class="group-text-symbol">Цена</p>
     </div>
-</div>
+
+    <div class="card9 box2">
+        <p class="text-symbol-a">Для него</p>
+        <p class="text-symbol-a card-text-symbol-active">Для нее</p>
+        <p class="text-symbol-a">Новый год</p>
+        <p class="text-symbol-a">23 февраля</p>
+        <p class="text-symbol-a">День рождения</p>
+        <p class="text-symbol-a">8 марта</p>
+        <p class="text-symbol-a">День учителя</p>
+    </div>
+
+    <button class="btn-symbol-a btn-symbol1 hover-fx">Сбросить</button>
+    <button class="btn-symbol-a btn-symbol2 hover-fx">Показать</button>
+
+    <div class="column-d col7">
+        <div class="product-list">
+            {% for product in products %}
+                <div class="product">
+                    {% if product.image %}
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" style="max-width: 150px;">
+                    {% endif %}
+                    <p>{{ product.name }}</p>
+                    <p>{{ product.price }} ₽</p>
+                    <a href="{% url 'product_detail' product.id %}">Подробнее</a>
+                </div>
+            {% empty %}
+                <p>Нет доступных продуктов.</p>
+            {% endfor %}
+        </div>
+    </div>
 
 
-<footer class="footer-a footer1">
-    <div class="nav nav1">
-        <h2 class="nav-subtitle">set present</h2>
-        <div class="nav-items1">
-            <div class="nav-circle circle-white1">
-                <object data="{% static 'assets/nav-circle-white/nav-graphic.svg' %}" class="nav-graphic1"
+    <footer class="footer-a footer1">
+        <div class="nav nav1">
+            <h2 class="nav-subtitle">set present</h2>
+            <div class="nav-items1">
+                <div class="nav-circle circle-white1">
+                    <object data="{% static 'assets/nav-circle-white/nav-graphic.svg' %}" class="nav-graphic1"
+                            type="image/svg+xml"></object>
+                </div>
+                <object data="{% static 'assets/nav-nav-items/nav-graphic.svg' %}" class="graphic nav-graphic2"
+                        type="image/svg+xml"></object>
+                <object data="{% static 'assets/nav-nav-items/nav-graphic2.svg' %}" class="graphic nav-graphic-right"
                         type="image/svg+xml"></object>
             </div>
-            <object data="{% static 'assets/nav-nav-items/nav-graphic.svg' %}" class="graphic nav-graphic2"
-                    type="image/svg+xml"></object>
-            <object data="{% static 'assets/nav-nav-items/nav-graphic2.svg' %}" class="graphic nav-graphic-right"
-                    type="image/svg+xml"></object>
         </div>
-    </div>
-    <div class="nav-items-a nav-items2">
-        <p class="nav-items-text-symbol">каталог</p>
-        <p class="nav-items-text-symbol">конструктор</p>
-        <p class="nav-items-text-symbol">о компании</p>
-        <p class="nav-items-text-symbol">контакты</p>
-        <p class="nav-items-text-symbol">Доставка</p>
-    </div>
-</footer>
+        <div class="nav-items-a nav-items2">
+            <p class="nav-items-text-symbol">каталог</p>
+            <p class="nav-items-text-symbol">конструктор</p>
+            <p class="nav-items-text-symbol">о компании</p>
+            <p class="nav-items-text-symbol">контакты</p>
+            <p class="nav-items-text-symbol">Доставка</p>
+        </div>
+    </footer>
 {% endblock %}

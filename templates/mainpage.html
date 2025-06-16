@@ -1,128 +1,134 @@
-{% extends 'base.html' %}
 {% load static %}
 {% block title %}Главная{% endblock %}
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
-  <header class="header">
-    <div class="header-group1">
-      <p class="header-text">+7 (495) 488-72-72</p>
-      <button class="btn3 hover-fx btn1">
-        <object data="{% static 'assets/btn-icon.svg' %}" class="btn-icon-heros-outline-phone btn-icon3" type="image/svg+xml"></object>
-      </button>
-    </div>
-
-    <div class="row-a row1">
-      <object data="{% static 'assets/row/row-graphic.svg' %}" class="row-graphic" type="image/svg+xml"></object>
-      <p class="row-text1">Поиск по каталогу</p>
-    </div>
-
-    <button class="header-btn-set-present hover-fx text1">set present</button>
-    <object data="{% static 'assets/header-heroicons.svg' %}" class="heroicons-solid-heart-a header-heroicons1" type="image/svg+xml"></object>
-    <object data="{% static 'assets/header-heroicons-921.svg' %}" class="heroicons-solid-heart-a header-heroicons2" type="image/svg+xml"></object>
-    <object data="{% static 'assets/header-heroicons-887.svg' %}" class="heroicons-solid-heart-a header-heroicons3" type="image/svg+xml"></object>
-    <object data="{% static 'assets/header-graphic.svg' %}" class="header-graphic" type="image/svg+xml"></object>
-    <h1 class="header-title">set present</h1>
-    <h2 class="header-subtitle subtitle1">Корпоративные подарки на заказ</h2>
-    <button class="header-btn-symbol1 hover-fx text2">Создать подарок</button>
-    <a href="{% url 'catalog' %}" class="header-btn-symbol2 text2 hover-fx">Каталог</a>
-    <div class="header-group2">
-      <img src="{% static 'assets/mainpage/header-mask-group.png' %}" />
-    </div>
-  </header>
-
-  <h2 class="mainpage-subtitle-question subtitle2">Кто мы?</h2>
-  <h2 class="mainpage-subtitle-symbol1 subtitle1">
-    Мы компания помогающая людям дарить уникальные подарки
-  </h2>
-  <a href="{% url 'catalog' %}" class="btn-symbol-a mainpage-btn1 hover-fx">Каталог</a>
-
-  <div class="mainpage-row">
-    <div class="mainpage-group-left">
-      <img src="{% static 'assets/mainpage/mainpage-symbol1.png' %}" class="mainpage-symbol1 box1" />
-      <button class="btn-symbol-b mainpage-btn2 hover-fx">Новогодние наборы</button>
-    </div>
-
-    <div class="mainpage-group">
-      <img src="{% static 'assets/mainpage/mainpage-symbol2.png' %}" class="mainpage-symbol2 box1" />
-      <button class="mainpage-btn-symbol1 hover-fx">Съедобные наборы</button>
-    </div>
-
-    <div class="group-a group1">
-      <img src="{% static 'assets/mainpage/group/group-symbol1.png' %}" class="group-symbol1 box1" />
-      <button class="btn-symbol-b group-btn-symbol hover-fx">Офисная атрибутика</button>
-    </div>
-
-    <div class="group-a group2">
-      <img src="{% static 'assets/mainpage/group/group-symbol2.png' %}" class="group-symbol1 box1" />
-      <button class="btn-symbol-b group-btn-symbol hover-fx">Для женщин</button>
-    </div>
-
-    <div class="group-a group3">
-      <img src="{% static 'assets/mainpage/group/group-symbol3.png' %}" class="group-symbol1 box1" />
-      <button class="btn-symbol-b group-btn-symbol hover-fx">Для мужчин</button>
-    </div>
-  </div>
-
-  <h2 class="mainpage-subtitle-symbol2 subtitle1">Как создать уникальный подарок?</h2>
-  <h2 class="subtitle2">
-    Мы создали уникальный конструкторт с помощью <br />
-    которого всего за 3 шага вы сможете создать свой уникальный набор
-  </h2>
-  <div class="line-a mainpage-line1"></div>
-
-  <div class="column-a col4">
-    <h1 class="column-title">1</h1>
-    <img src="{% static 'assets/mainpage/column/column-symbol1.png' %}" class="symbol-a column-symbol" />
-    <h2 class="subtitle-symbol-a">Упаковка</h2>
-    <h2 class="column-subtitle-bottom">
-      Сделайте подарок ярким и запоминающимся, выбрав понравившуюся упаковку
-    </h2>
-  </div>
-
-  <div class="line-a mainpage-line2"></div>
-
-  <div class="column-a col5">
-    <h1 class="column-title">2</h1>
-    <img src="{% static 'assets/mainpage/column/column-symbol2.png' %}" class="symbol-a column-symbol" />
-    <h2 class="subtitle-symbol-a">Наполнение</h2>
-    <h2 class="column-subtitle-bottom">
-      В нашем конструкторе представлен широкий ассортимент подарков на любой случай
-    </h2>
-  </div>
-
-  <div class="line-a mainpage-line3"></div>
-
-  <div class="column-a col6">
-    <h1 class="column-title">3</h1>
-    <img src="{% static 'assets/mainpage/column/column-symbol3.png' %}" class="symbol-a column-symbol" />
-    <h2 class="subtitle-symbol-a">Оформление</h2>
-    <h2 class="column-subtitle-bottom">
-      Сделайте подарок более персонализированным, добавив уникальное оформление
-    </h2>
-  </div>
-
-  <div class="line-a mainpage-line4"></div>
-  <h2 class="mainpage-subtitle-symbol4 subtitle1">Создай уникальный набор в три шага</h2>
-  <button class="btn-symbol-a mainpage-btn-symbol2 hover-fx">Конструктор</button>
-
-  <footer class="footer-a footer1">
-    <div class="nav nav1">
-      <h2 class="nav-subtitle">set present</h2>
-      <div class="nav-items1">
-        <div class="nav-circle circle-white1">
-          <object data="{% static 'assets/nav-circle-white/nav-graphic.svg' %}" class="nav-graphic1" type="image/svg+xml"></object>
+    <link rel="stylesheet" href="{% static 'css/mainpage.css' %}">
+    <header class="header">
+        <div class="header-group1">
+            <p class="header-text">+7 (495) 488-72-72</p>
+            <button class="btn3 hover-fx btn1">
+                <object data="{% static 'assets/btn-icon.svg' %}" class="btn-icon-heros-outline-phone btn-icon3"
+                        type="image/svg+xml"></object>
+            </button>
         </div>
-        <object data="{% static 'assets/nav-nav-items/nav-graphic.svg' %}" class="graphic nav-graphic2" type="image/svg+xml"></object>
-        <object data="{% static 'assets/nav-nav-items/nav-graphic2.svg' %}" class="graphic nav-graphic-right" type="image/svg+xml"></object>
-      </div>
+
+        <div class="row-a row1">
+            <object data="{% static 'assets/row/row-graphic.svg' %}" class="row-graphic" type="image/svg+xml"></object>
+            <p class="row-text1">Поиск по каталогу</p>
+        </div>
+
+        <button class="header-btn-set-present hover-fx text1">set present</button>
+        <object data="{% static 'assets/header-heroicons.svg' %}" class="heroicons-solid-heart-a header-heroicons1"
+                type="image/svg+xml"></object>
+        <object data="{% static 'assets/header-heroicons-921.svg' %}" class="heroicons-solid-heart-a header-heroicons2"
+                type="image/svg+xml"></object>
+        <object data="{% static 'assets/header-heroicons-887.svg' %}" class="heroicons-solid-heart-a header-heroicons3"
+                type="image/svg+xml"></object>
+        <object data="{% static 'assets/header-graphic.svg' %}" class="header-graphic" type="image/svg+xml"></object>
+        <h1 class="header-title">set present</h1>
+        <h2 class="header-subtitle subtitle1">Корпоративные подарки на заказ</h2>
+        <button class="header-btn-symbol1 hover-fx text2">Создать подарок</button>
+        <a href="{% url 'catalog' %}" class="header-btn-symbol2 text2 hover-fx">Каталог</a>
+        <div class="header-group2">
+            <img src="{% static 'assets/mainpage/header-mask-group.png' %}"/>
+        </div>
+    </header>
+
+    <h2 class="mainpage-subtitle-question subtitle2">Кто мы?</h2>
+    <h2 class="mainpage-subtitle-symbol1 subtitle1">
+        Мы компания помогающая людям дарить уникальные подарки
+    </h2>
+    <a href="{% url 'catalog' %}" class="btn-symbol-a mainpage-btn1 hover-fx">Каталог</a>
+
+    <div class="mainpage-row">
+        <div class="mainpage-group-left">
+            <img src="{% static 'assets/mainpage/mainpage-symbol1.png' %}" class="mainpage-symbol1 box1"/>
+            <button class="btn-symbol-b mainpage-btn2 hover-fx">Новогодние наборы</button>
+        </div>
+
+        <div class="mainpage-group">
+            <img src="{% static 'assets/mainpage/mainpage-symbol2.png' %}" class="mainpage-symbol2 box1"/>
+            <button class="mainpage-btn-symbol1 hover-fx">Съедобные наборы</button>
+        </div>
+
+        <div class="group-a group1">
+            <img src="{% static 'assets/mainpage/group/group-symbol1.png' %}" class="group-symbol1 box1"/>
+            <button class="btn-symbol-b group-btn-symbol hover-fx">Офисная атрибутика</button>
+        </div>
+
+        <div class="group-a group2">
+            <img src="{% static 'assets/mainpage/group/group-symbol2.png' %}" class="group-symbol1 box1"/>
+            <button class="btn-symbol-b group-btn-symbol hover-fx">Для женщин</button>
+        </div>
+
+        <div class="group-a group3">
+            <img src="{% static 'assets/mainpage/group/group-symbol3.png' %}" class="group-symbol1 box1"/>
+            <button class="btn-symbol-b group-btn-symbol hover-fx">Для мужчин</button>
+        </div>
     </div>
 
-    <div class="nav-items-a nav-items2">
-      <p class="nav-items-text-symbol">каталог</p>
-      <p class="nav-items-text-symbol">конструктор</p>
-      <p class="nav-items-text-symbol">о компании</p>
-      <p class="nav-items-text-symbol">контакты</p>
-      <p class="nav-items-text-symbol">Доставка</p>
+    <h2 class="mainpage-subtitle-symbol2 subtitle1">Как создать уникальный подарок?</h2>
+    <h2 class="subtitle2">
+        Мы создали уникальный конструкторт с помощью <br/>
+        которого всего за 3 шага вы сможете создать свой уникальный набор
+    </h2>
+    <div class="line-a mainpage-line1"></div>
+
+    <div class="column-a col4">
+        <h1 class="column-title">1</h1>
+        <img src="{% static 'assets/mainpage/column/column-symbol1.png' %}" class="symbol-a column-symbol"/>
+        <h2 class="subtitle-symbol-a">Упаковка</h2>
+        <h2 class="column-subtitle-bottom">
+            Сделайте подарок ярким и запоминающимся, выбрав понравившуюся упаковку
+        </h2>
     </div>
-  </footer>
+
+    <div class="line-a mainpage-line2"></div>
+
+    <div class="column-a col5">
+        <h1 class="column-title">2</h1>
+        <img src="{% static 'assets/mainpage/column/column-symbol2.png' %}" class="symbol-a column-symbol"/>
+        <h2 class="subtitle-symbol-a">Наполнение</h2>
+        <h2 class="column-subtitle-bottom">
+            В нашем конструкторе представлен широкий ассортимент подарков на любой случай
+        </h2>
+    </div>
+
+    <div class="line-a mainpage-line3"></div>
+
+    <div class="column-a col6">
+        <h1 class="column-title">3</h1>
+        <img src="{% static 'assets/mainpage/column/column-symbol3.png' %}" class="symbol-a column-symbol"/>
+        <h2 class="subtitle-symbol-a">Оформление</h2>
+        <h2 class="column-subtitle-bottom">
+            Сделайте подарок более персонализированным, добавив уникальное оформление
+        </h2>
+    </div>
+
+    <div class="line-a mainpage-line4"></div>
+    <h2 class="mainpage-subtitle-symbol4 subtitle1">Создай уникальный набор в три шага</h2>
+    <button class="btn-symbol-a mainpage-btn-symbol2 hover-fx">Конструктор</button>
+
+    <footer class="footer-a footer1">
+        <div class="nav nav1">
+            <h2 class="nav-subtitle">set present</h2>
+            <div class="nav-items1">
+                <div class="nav-circle circle-white1">
+                    <object data="{% static 'assets/nav-circle-white/nav-graphic.svg' %}" class="nav-graphic1"
+                            type="image/svg+xml"></object>
+                </div>
+                <object data="{% static 'assets/nav-nav-items/nav-graphic.svg' %}" class="graphic nav-graphic2"
+                        type="image/svg+xml"></object>
+                <object data="{% static 'assets/nav-nav-items/nav-graphic2.svg' %}" class="graphic nav-graphic-right"
+                        type="image/svg+xml"></object>
+            </div>
+        </div>
+
+        <div class="nav-items-a nav-items2">
+            <p class="nav-items-text-symbol">каталог</p>
+            <p class="nav-items-text-symbol">конструктор</p>
+            <p class="nav-items-text-symbol">о компании</p>
+            <p class="nav-items-text-symbol">контакты</p>
+            <p class="nav-items-text-symbol">Доставка</p>
+        </div>
+    </footer>
 {% endblock %}

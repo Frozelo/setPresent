@@ -79,7 +79,7 @@ def main_page(request):
 # Каталог
 def catalog(request):
     products = Product.objects.all().order_by('name')
-    return render(request, "catalog.html", {"products": products})
+    return render(request, "catalog2.html", {"products": products})
 
 
 def product_detail(request, product_id):
