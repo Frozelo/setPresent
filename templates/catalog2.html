@@ -1,436 +1,279 @@
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="{% static 'каталог/css/reset.css' %}" />
-	<link rel="stylesheet" href="{% static 'каталог/css/global.css' %}" />
-	<link rel="stylesheet" href="{% static 'каталог/css/desktop.css' %}" />
 
-</head>
 
-<body>
-	<div class="row-top1">
-		<p class="text-plus">+7 (495) 488-72-72</p>
-		<object data="{% static 'каталог/assets/graphic1.svg' %}" class="graphic-left1" type="image/svg+xml"></object>
-		<h2 class="subtitle-set-present">set present</h2>
-		
-		<div class="row1">
-			<object data="{% static 'каталог/assets/graphic2.svg' %}" class="graphic-left2" type="image/svg+xml"></object>
-			<p class="text-symbol1">Поиск по каталогу</p>
-		</div>
-		
-		<div class="group1">
-			<object data="{% static 'каталог/assets/heroicons-outline-phone.svg' %}" class="heroicons-outline-phone" type="image/svg+xml"></object>
-		</div>
-		
-		<object data="{% static 'каталог/assets/heroicons-solid-heart.svg' %}" class="heroicons-solid-user heroicons-solid-heart" type="image/svg+xml"></object>
-		<object data="{% static 'каталог/assets/heroicons.svg' %}" class="heroicons-solid-user heroicons" type="image/svg+xml"></object>
-		<object data="{% static 'каталог/assets/heroicons-solid-user.svg' %}" class="heroicons-solid-user heroicons-solid-user1" type="image/svg+xml"></object>
-	</div>
-	
-	<div class="col4">
-		<div class="row-top2">
-			<h2 class="subtitle-left">Каталог</h2>
-			
-			<button class="frame btn1 hover-dark">
-				<p>По популярности</p>
-				<object data="{% static 'каталог/assets/frame/frame-icon.svg' %}" class="frame-heroicons-solid-chevron frame-icon" type="image/svg+xml"></object>
-			</button>
-			
-			<button class="frame btn2 hover-dark">
-				<p>По алфавиту</p>
-				<object data="{% static 'каталог/assets/frame/frame-icon.svg' %}" class="frame-heroicons-solid-chevron frame-icon" type="image/svg+xml"></object>
-			</button>
-			
-			<div class="frame frame1">
-				<p>По цене</p>
-				<object data="{% static 'каталог/assets/frame/frame-icon.svg' %}" class="frame-heroicons-solid-chevron frame-icon" type="image/svg+xml"></object>
-			</div>
-		</div>
-		
-		<div class="col5">
-			<div class="group2">
-				<div class="card2">
-					<p class="card-text-symbol">Для него</p>
-					<p class="card-text-symbol card-text-symbol-active">Для нее</p>
-					<p class="card-text-symbol">Новый год</p>
-					<p class="card-text-symbol">23 февраля</p>
-					<p class="card-text-symbol">День рождения</p>
-					<p class="card-text-symbol">8 марта</p>
-					<p class="card-text-symbol">День учителя</p>
-				</div>
-				
-				<div class="card3">
-					<p class="card-text-top">Цена</p>
-					
-					<div class="card-row">
-						<div class="card-line"></div>
-						<div class="card-circle-black card-circle-black-left"></div>
-						<div class="card-circle-black card-circle-black-right"></div>
-					</div>
-					
-					<div class="card-row-bottom">
-						<p class="card-text4">350 ₽</p>
-						<p class="card-text5">11406₽</p>
-					</div>
-				</div>
-				
-				<button class="btn-symbol btn3 hover-dark">Сбросить</button>
-				<button class="btn-symbol btn-symbol1 hover-dark">Показать</button>
-				
-				<div class="col6">
-					<div class="row row2">
-						<div class="column col1">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Антрацит»
-								</p>
-								<button class="column-btn hover-bright">8 775 ₽</button>
-							</div>
-						</div>
-						
-						<div class="column col2">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Улыбайся чаще»
-								</p>
-								<button class="column-btn hover-bright">5 544 ₽</button>
-							</div>
-						</div>
-						
-						<div class="column col3">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Красота-это ты!»
-								</p>
-								<button class="column-btn hover-bright">4 900 ₽</button>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row row3">
-						<div class="column col1">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Антрацит»
-								</p>
-								<button class="column-btn hover-bright">8 775 ₽</button>
-							</div>
-						</div>
-						
-						<div class="column col2">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Улыбайся чаще»
-								</p>
-								<button class="column-btn hover-bright">5 544 ₽</button>
-							</div>
-						</div>
-						
-						<div class="column col3">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Красота-это ты!»
-								</p>
-								<button class="column-btn hover-bright">4 900 ₽</button>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row row4">
-						<div class="column col1">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Антрацит»
-								</p>
-								<button class="column-btn hover-bright">8 775 ₽</button>
-							</div>
-						</div>
-						
-						<div class="column col2">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Улыбайся чаще»
-								</p>
-								<button class="column-btn hover-bright">5 544 ₽</button>
-							</div>
-						</div>
-						
-						<div class="column col3">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Красота-это ты!»
-								</p>
-								<button class="column-btn hover-bright">4 900 ₽</button>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row row5">
-						<div class="column col1">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Антрацит»
-								</p>
-								<button class="column-btn hover-bright">8 775 ₽</button>
-							</div>
-						</div>
-						
-						<div class="column col2">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Улыбайся чаще»
-								</p>
-								<button class="column-btn hover-bright">5 544 ₽</button>
-							</div>
-						</div>
-						
-						<div class="column col3">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Красота-это ты!»
-								</p>
-								<button class="column-btn hover-bright">4 900 ₽</button>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row row6">
-						<div class="column col1">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Антрацит»
-								</p>
-								<button class="column-btn hover-bright">8 775 ₽</button>
-							</div>
-						</div>
-						
-						<div class="column col2">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Улыбайся чаще»
-								</p>
-								<button class="column-btn hover-bright">5 544 ₽</button>
-							</div>
-						</div>
-						
-						<div class="column col3">
-							<div class="card">
-								<div class="card-circle-white-top circle">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons.svg' %}" class="card-heroicons-solid-heart card-heroicons1" type="image/svg+xml"></object>
-								</div>
-								
-								<div class="card-circle-white-bottom">
-									<object data="{% static 'каталог/assets/card-circle-white/card-heroicons2.svg' %}" class="card-heroicons-solid-heart card-heroicons2" type="image/svg+xml"></object>
-								</div>
-							</div>
-							
-							<div class="column-col-bottom">
-								<p>
-									Подарочный набор<br />
-									«Красота-это ты!»
-								</p>
-								<button class="column-btn hover-bright">4 900 ₽</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="row-bottom">
-				<p class="text-symbol2">Показать еще</p>
-				
-				<div class="circle-black-right">
-					<object data="{% static 'каталог/assets/heroicons-solid-plus.svg' %}" class="heroicons-solid-plus" type="image/svg+xml"></object>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="col7">
-		<h1 class="title-symbol">Создай уникальный набор в три шага</h1>
-		<button class="btn-symbol btn-symbol2 hover-bright">Конструктор</button>
-	</div>
-	
-	<footer class="footer">
-		<div class="footer-nav">
-			<h2 class="footer-subtitle">set present</h2>
-			
-			<div class="footer-nav-items1">
-				<div class="footer-circle circle">
-					<object data="{% static 'каталог/assets/footer-graphic1.svg' %}" class="footer-graphic1" type="image/svg+xml"></object>
-				</div>
-				
-				<object data="{% static 'каталог/assets/footer-graphic2.svg' %}" class="footer-graphic footer-graphic2" type="image/svg+xml"></object>
-				<object data="{% static 'каталог/assets/footer-graphic3.svg' %}" class="footer-graphic footer-graphic-right" type="image/svg+xml"></object>
-			</div>
-		</div>
-		
-		<div class="footer-nav-items2">
-			<p class="footer-text-symbol">каталог</p>
-			<p class="footer-text-symbol">конструктор</p>
-			<p class="footer-text-symbol">о компании</p>
-			<p class="footer-text-symbol">контакты</p>
-			<p class="footer-text-symbol">Доставка</p>
-		</div>
-	</footer>
-</body>
+{% block extra_css %}
+<style>
+:root {
+    --yellow: #fece15;
+    --black: #000;
+    --gray: #959595;
+    --border-radius: 30px;
+    --margin-md: 32px;
+    --margin-sm: 16px;
+    --font-main: 'Montserrat', Arial, sans-serif;
+}
 
-</html>
+body {
+    font-family: var(--font-main);
+    background: #fff;
+    color: var(--black);
+}
+
+.catalog-header {
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    padding: 44px var(--margin-md) 0 var(--margin-md);
+    font-size: 16px;
+    font-weight: 400;
+}
+.catalog-header .subtitle-set-present {
+    font-size: 32px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 2px;
+    margin-right: auto;
+}
+.catalog-header .text-plus {
+    margin-left: 60px;
+    color: var(--gray);
+}
+.catalog-header form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border: 1px solid var(--black);
+    border-radius: 100px;
+    padding: 11px 23px;
+}
+.catalog-header input[type="search"] {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: transparent;
+    min-width: 180px;
+}
+.catalog-header input[type="search"]::placeholder { color: var(--gray); }
+
+.catalog-filters {
+    display: flex;
+    gap: 40px;
+    margin: 48px var(--margin-md) 24px var(--margin-md);
+    align-items: flex-end;
+}
+.catalog-filters .filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.catalog-filters label { font-size: 16px; color: var(--gray);}
+.catalog-filters select,
+.catalog-filters input[type="number"] {
+    padding: 8px 18px;
+    border-radius: 100px;
+    border: 1px solid #bbb;
+    font-size: 16px;
+    background: #fafafa;
+    min-width: 90px;
+}
+.catalog-filters button, .catalog-filters [type="reset"] {
+    background: var(--yellow);
+    color: var(--black);
+    border: none;
+    padding: 8px 26px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 7px;
+    transition: filter 0.2s;
+}
+.catalog-filters button:hover, .catalog-filters [type="reset"]:hover {
+    filter: brightness(1.12);
+}
+.catalog-filters .sort-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.catalog-filters .sort-group button {
+    background: #000;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 100px;
+    margin: 0 3px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.catalog-products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-start;
+    margin: 0 var(--margin-md) 0 var(--margin-md);
+}
+.product-card {
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 12px #0002;
+    min-width: 260px; max-width: 320px;
+    padding: 28px 18px 26px 18px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+    border: 1px solid #e5e5e5;
+}
+.product-card:hover { box-shadow: 0 4px 24px #0002; }
+.product-card h3 { font-size: 20px; font-weight: 600; margin: 0 0 10px 0; text-align: center;}
+.product-card .price {
+    background: var(--yellow);
+    color: var(--black);
+    font-weight: bold;
+    font-size: 22px;
+    padding: 6px 22px;
+    border-radius: 100px;
+    margin-bottom: 14px;
+}
+.product-card .card-actions {
+    display: flex; gap: 10px; margin-top: 10px;
+}
+.product-card button, .product-card a {
+    background: var(--yellow);
+    color: var(--black);
+    border: none;
+    border-radius: 100px;
+    padding: 8px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: filter 0.2s;
+}
+.product-card button:hover, .product-card a:hover {
+    filter: brightness(1.14);
+}
+
+.catalog-cta {
+    background: var(--yellow);
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    border-radius: 30px;
+    margin: 44px var(--margin-md);
+    padding: 40px 10vw;
+}
+.catalog-cta h2 {
+    font-size: 2rem;
+    margin: 0 0 12px 0;
+    font-weight: 700;
+    letter-spacing: -1.2px;
+}
+.catalog-cta a {
+    background: #fff;
+    color: var(--black);
+    padding: 14px 40px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border: 2px solid var(--black);
+}
+
+.catalog-footer {
+    margin-top: 60px;
+    padding: 50px var(--margin-md) 80px var(--margin-md);
+    color: #fff;
+    background: #000;
+    border-radius: 0 0 24px 24px;
+    text-align: left;
+    font-size: 1.1rem;
+}
+@media (max-width: 960px) {
+    .catalog-header, .catalog-filters, .catalog-products, .catalog-cta, .catalog-footer { padding-left: var(--margin-sm); padding-right: var(--margin-sm);}
+    .catalog-products { justify-content: center; }
+}
+@media (max-width: 600px) {
+    .catalog-header, .catalog-filters, .catalog-cta, .catalog-footer { flex-direction: column; gap: 18px;}
+    .catalog-products { flex-direction: column; gap: 24px;}
+    .product-card { min-width: 0; width: 100%; }
+    .catalog-cta { padding: 24px 3vw;}
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<div class="catalog-header">
+    <span class="text-plus">+7 (495) 488-72-72</span>
+    <span class="subtitle-set-present">set present</span>
+    <form method="get" action=".">
+        <input type="search" name="q" placeholder="Поиск по каталогу" value="{{ request.GET.q }}">
+    </form>
+</div>
+
+<form method="get" class="catalog-filters">
+    <div class="filter-group">
+        <label for="tag">Тег</label>
+        <select name="tag" id="tag">
+            <option value="">Все</option>
+            {% for tag in tags %}
+                <option value="{{ tag }}" {% if request.GET.tag == tag %}selected{% endif %}>{{ tag }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="filter-group">
+        <label for="min_price">Мин. цена</label>
+        <input type="number" min="0" name="min_price" id="min_price" value="{{ request.GET.min_price }}">
+    </div>
+    <div class="filter-group">
+        <label for="max_price">Макс. цена</label>
+        <input type="number" min="0" name="max_price" id="max_price" value="{{ request.GET.max_price }}">
+    </div>
+    <div class="sort-group">
+        <button type="submit" name="sort" value="popular">По популярности</button>
+        <button type="submit" name="sort" value="name">По алфавиту</button>
+        <button type="submit" name="sort" value="price">По цене</button>
+    </div>
+    <button type="reset">Сбросить</button>
+    <button type="submit">Показать</button>
+</form>
+
+<div class="catalog-products">
+    {% for product in products %}
+        <div class="product-card">
+            {# Тут может быть product.image, если есть #}
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% endif %}
+            <h3>{{ product.name }}</h3>
+            <div class="price">{{ product.price|floatformat:"0" }} ₽</div>
+            <div class="card-actions">
+                <a href="{% url 'product_detail' product.id %}">Подробнее</a>
+                <form method="post" action="{% url 'add_to_cart' product.id %}" style="display:inline">{% csrf_token %}
+                    <button type="submit">В корзину</button>
+                </form>
+            </div>
+        </div>
+    {% empty %}
+        <div style="flex:1;text-align:center;padding:42px 0;color:#bbb;font-size:1.18rem;">
+            Нет товаров.
+        </div>
+    {% endfor %}
+</div>
+
+<div class="catalog-cta">
+    <h2>Создай уникальный набор в три шага</h2>
+    <a href="{% url 'constructor' %}">Конструктор</a>
+</div>
+
+<div class="catalog-footer">
+    <b>set present</b> &mdash; интернет-магазин подарков, {{ now|date:"Y" }}<br>
+    Каталог, доставка, оплата, контакты.
+</div>
+{% endblock %}
+
+

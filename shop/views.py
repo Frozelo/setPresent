@@ -37,7 +37,7 @@ def add_to_cart(request, product_id):
 def view_cart(request):
     cart = get_object_or_404(Cart, user_id=request.user)
     cart_items = CartItem.objects.filter(cart_id=cart)
-    return render(request, 'shop/view_cart.html', {'cart_items': cart_items})
+    return render(request, 'cart.html', {'cart_items': cart_items})
 
 
 @login_required(login_url='auth')
