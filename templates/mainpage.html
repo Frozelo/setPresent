@@ -24,7 +24,7 @@
     <h1 class="header-title">set present</h1>
     <h2 class="header-subtitle subtitle1">Корпоративные подарки на заказ</h2>
     <button class="header-btn-symbol1 hover-fx text2">Создать подарок</button>
-    <button class="header-btn-symbol2 text2 hover-fx">Каталог</button>
+    <a href="{% url 'catalog' %}" class="header-btn-symbol2 text2 hover-fx">Каталог</a>
     <div class="header-group2">
       <img src="{% static 'assets/mainpage/header-mask-group.png' %}" />
     </div>
@@ -34,7 +34,7 @@
   <h2 class="mainpage-subtitle-symbol1 subtitle1">
     Мы компания помогающая людям дарить уникальные подарки
   </h2>
-  <button class="btn-symbol-a mainpage-btn1 hover-fx">Каталог</button>
+  <a href="{% url 'catalog' %}" class="btn-symbol-a mainpage-btn1 hover-fx">Каталог</a>
 
   <div class="mainpage-row">
     <div class="mainpage-group-left">

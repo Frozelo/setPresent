@@ -11,27 +11,24 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
 </head>
 <body>
+<div id="sideNav" class="side-nav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="{% url 'main_page' %}">Главная</a>
+    <a href="{% url 'catalog' %}">Каталог</a>
+    <a href="{% url 'cart' %}">Корзина</a>
+    <a href="{% url 'favourites' %}">Избранное</a>
+    <a href="{% url 'profile' %}">Профиль</a>
+    <a href="{% url 'auth' %}">Вход</a>
+    <a href="{% url 'registration' %}">Регистрация</a>
+</div>
+
 <header>
-    <nav class="main-nav">
-        <a href="{% url 'main_page' %}">Главная</a>
-        <a href="{% url 'catalog' %}">Каталог</a>
-        <a href="{% url 'cart' %}">Корзина</a>
-        <a href="{% url 'favourites' %}">Избранное</a>
-        <a href="{% url 'profile' %}">Профиль</a>
-        <a href="{% url 'auth' %}">Вход</a>
-        <a href="{% url 'registration' %}">Регистрация</a>
-    </nav>
+    <button class="menu-button" onclick="openNav()">&#9776;</button>
 </header>
 <main>
 {% block content %}{% endblock %}
 </main>
-<footer>
-    <nav class="footer-nav">
-        <a href="{% url 'main_page' %}">Главная</a>
-        <a href="{% url 'catalog' %}">Каталог</a>
-        <a href="{% url 'cart' %}">Корзина</a>
-        <a href="{% url 'favourites' %}">Избранное</a>
-    </nav>
-</footer>
+<footer></footer>
+<script src="{% static 'js/slider.js' %}"></script>
 </body>
 </html>
