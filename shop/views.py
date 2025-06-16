@@ -37,6 +37,24 @@ def add_to_cart(request, product_id):
 def view_cart(request):
     cart = get_object_or_404(Cart, user_id=request.user)
     cart_items = CartItem.objects.filter(cart_id=cart)
+
+    if request.method == 'POST':
+        form = OrderForm(request.POST)
+        if form.is_valid() and cart_items.exists():
+            order = form.save(commit=False)
+            if request.user.is_authenticated:
+                order.user_id = request.user
+            order.save()
+            for item in cart_items:
+                OrderItem.objects.create(
+                    order_id=order,
+                    product_id=item.product_id,
+                    quantity=item.quantity,
+                    price=item.product_id.price,
+                )
+            cart_items.delete()
+            return redirect('catalog')
+        
     return render(request, 'cart.html', {'cart_items': cart_items})
 
 
